@@ -472,7 +472,6 @@ h1.section-header {
   }
 }
 
-
 /*====== COMMENTS ======*/
 
 .comments-section {
@@ -480,7 +479,7 @@ h1.section-header {
   padding-bottom: 30px;
   .submit {
     max-width: 483px;
-    margin-bottom: 43px;
+    margin-bottom: 70px;
     button {
       float: right;
     }
@@ -488,15 +487,14 @@ h1.section-header {
 
 }
 
-
 textarea {
   padding: 5px;
   margin: 15px 0 10px -2px;
   resize: none;
-  color: #bbb;
+  color: #ffffff;
   max-width: 500px;
   text-shadow: 1px 1px 1px black;
-  background: $blackBlue;
+  background: rgba(40, 50, 68, 0.97);
   border-radius: 2px;
   border: 1px solid transparent;
   font-family: Lato, Helvetica Neue, Arial, sans-serif;
@@ -506,9 +504,9 @@ textarea {
 
   &:focus {
     color: white;
-    background: #0a0d14;
+    background: rgba(33, 44, 61, 0.95);
     outline: 0;
-    border: 1px solid $blackBlue;
+    border: 1px solid rgba(33, 44, 61, 0.95);;
   }
 }
 
@@ -524,17 +522,166 @@ textarea {
 
 /*====== END COMMENTS ======*/
 
+/*====== HAMBURGER ======*/
+
+#nav-icon4 {
+
+  width: 60px;
+  height: 45px;
+  position: relative;
+  margin: 35px 0 35px 0;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  span {
+    margin-top: 35px;
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    background: white;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    &:nth-child(1) {
+      top: 0px;
+      transform-origin: left center;
+    }
+    &:nth-child(2) {
+      top: 18px;
+      transform-origin: left center;
+    }
+    &:nth-child(3) {
+      top: 36px;
+      transform-origin: left center;
+    }
+  }
+  &.open span {
+    &:nth-child(1) {
+      transform: rotate(45deg);
+      top: -3px;
+      left: 8px;
+    }
+    &:nth-child(2) {
+      width: 0%;
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      transform: rotate(-45deg);
+      top: 39px;
+      left: 8px;
+    }
+  }
+
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+  text-align: center;
+  li {
+    display: block;
+  }
+}
+
+/*====== END HAMBURGER ======*/
+
+/*====== LOGIN ======*/
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+  min-height: 75%;
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+  background: #1f1f1f;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  input {
+    outline: 0;
+    background: rgba(91, 98, 115, 0.97);
+    color: white;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-left: 3px solid transparent;
+    transition: all 0.2s ease;
+    &:focus {
+      border-left: 3px solid white;
+    }
+    &::placeholder {
+      color: #cacaca;
+    }
+  }
+  button {
+    margin-top: 10px;
+    text-transform: uppercase;
+    outline: 0;
+    background: $lightBlue;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+}
 
 
+.form {
+  .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+    a {
+      color: $lightBlue;
+      text-decoration: none;
+    }
+  }
+  .register-form {
+    display: none;
+  }
+}
+
+.login-form {
+  padding: 30px 20px 20px 20px;
+}
+
+.header {
+  text-align: center;
+  text-transform: uppercase;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  font-size: 1.7em;
+  //background-image: url('http://www.migloo.be/labs/lab1/img/backgroundBox.png');
+  background: rgba(3, 11, 25, 0.95);
+  padding: 2em;
+  color: white;
+}
+
+/*====== END LOGIN ======*/
 
 /*====== FOOTER ======*/
 
 .footer {
   background: $blackBlue;
   padding: 10px;
+  text-align: center;
+
   p {
     color: white;
-    text-align: center;
     span {
       border-left: 3px solid $lightBlue;
       padding-left: 10px;
