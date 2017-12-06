@@ -472,6 +472,21 @@ h1.section-header {
   }
 }
 
+.pagination {
+  text-align: center;
+  //border: 1px solid white;
+  margin: 40px 0 -40px 0;
+  font-size: 1.4em;
+  span {
+    border: 1px solid white;
+    padding: 3px 8px;
+    cursor: pointer;
+    &:hover {
+      color: $lightBlue;
+    }
+  }
+}
+
 /*====== COMMENTS ======*/
 
 .comments-section {
@@ -638,7 +653,6 @@ textarea {
     cursor: pointer;
   }
 }
-
 
 .form {
   .message {

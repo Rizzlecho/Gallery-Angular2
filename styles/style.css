@@ -380,6 +380,17 @@ h1.section-header {
   .properties h2 {
     padding-bottom: 20px; }
 
+.pagination {
+  text-align: center;
+  margin: 40px 0 -40px 0;
+  font-size: 1.4em; }
+  .pagination span {
+    border: 1px solid white;
+    padding: 3px 8px;
+    cursor: pointer; }
+    .pagination span:hover {
+      color: #42b6ff; }
+
 /*====== COMMENTS ======*/
 .comments-section {
   padding-top: 10px;
