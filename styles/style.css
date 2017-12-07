@@ -49,6 +49,12 @@ a:hover, button:hover {
   cursor: pointer; }
 
 /*END OF RESET*/
+.hor-line {
+  max-width: 1164px;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(101, 101, 101, 0.75), rgba(0, 0, 0, 0)); }
+
 header {
   padding: 30px;
   border-bottom: 0.1px solid #1a1a1a;
@@ -401,7 +407,7 @@ h1.section-header {
     .comments-section .submit button {
       float: right; }
 
-textarea {
+.text-area {
   padding: 5px;
   margin: 15px 0 10px -2px;
   resize: none;
@@ -415,7 +421,7 @@ textarea {
   font-weight: 400;
   font-size: 17px;
   display: block; }
-  textarea:focus {
+  .text-area:focus {
     color: white;
     background: rgba(33, 44, 61, 0.95);
     outline: 0;
@@ -481,8 +487,8 @@ textarea {
 /*====== END HAMBURGER ======*/
 /*====== LOGIN ======*/
 .login-page {
-  width: 360px;
-  padding: 8% 0 0;
+  max-width: 600px;
+  padding: 150px 0 0;
   margin: auto;
   min-height: 75%; }
 
@@ -536,6 +542,31 @@ textarea {
 
 .login-form {
   padding: 30px 20px 20px 20px; }
+  .login-form label {
+    position: absolute;
+    font-size: 19px;
+    text-align: center; }
+  .login-form textarea {
+    resize: none;
+    max-width: 600px;
+    height: 130px;
+    outline: 0;
+    background: rgba(91, 98, 115, 0.97);
+    color: white;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-left: 3px solid transparent;
+    transition: all 0.2s ease; }
+    .login-form textarea:focus {
+      border-left: 3px solid white; }
+    .login-form textarea::placeholder {
+      color: #cacaca; }
+  .login-form #title, .login-form #description, .login-form #image {
+    margin-top: 30px; }
 
 .header {
   text-align: center;
@@ -547,7 +578,24 @@ textarea {
   padding: 2em;
   color: white; }
 
+.upload-form {
+  max-width: 600px;
+  margin-bottom: 120px;
+  margin-top: -30px; }
+
 /*====== END LOGIN ======*/
+.heading {
+  text-align: center;
+  padding-top: 65px;
+  margin-bottom: -55px; }
+  .heading hr {
+    max-width: 600px;
+    margin-top: 30px;
+    margin-bottom: -20px;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(101, 101, 101, 0.75), rgba(0, 0, 0, 0)); }
+
 /*====== FOOTER ======*/
 .footer {
   background: rgba(2, 9, 23, 0.95);

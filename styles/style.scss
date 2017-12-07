@@ -66,6 +66,14 @@ a:hover, button:hover {
 
 /*END OF RESET*/
 
+
+.hor-line {
+  max-width: 1164px;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(101, 101, 101, 0.75), rgba(0, 0, 0, 0));
+}
+
 header {
   padding: 30px;
   border-bottom: 0.1px solid #1a1a1a;
@@ -502,7 +510,7 @@ h1.section-header {
 
 }
 
-textarea {
+.text-area {
   padding: 5px;
   margin: 15px 0 10px -2px;
   resize: none;
@@ -605,8 +613,8 @@ textarea {
 
 /*====== LOGIN ======*/
 .login-page {
-  width: 360px;
-  padding: 8% 0 0;
+  max-width: 600px;
+  padding: 150px 0 0;
   margin: auto;
   min-height: 75%;
 }
@@ -671,6 +679,37 @@ textarea {
 
 .login-form {
   padding: 30px 20px 20px 20px;
+  label {
+    position: absolute;
+    font-size: 19px;
+    text-align: center;
+  }
+
+  textarea {
+    resize: none;
+    max-width: 600px;
+    height: 130px;
+    outline: 0;
+    background: rgba(91, 98, 115, 0.97);
+    color: white;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-left: 3px solid transparent;
+    transition: all 0.2s ease;
+    &:focus {
+      border-left: 3px solid white;
+    }
+    &::placeholder {
+      color: #cacaca;
+    }
+  }
+  #title, #description, #image{
+    margin-top: 30px;
+  }
 }
 
 .header {
@@ -685,7 +724,29 @@ textarea {
   color: white;
 }
 
+.upload-form {
+  max-width: 600px;
+  margin-bottom: 120px;
+  margin-top: -30px;
+}
+
+
 /*====== END LOGIN ======*/
+
+.heading {
+  text-align: center;
+  padding-top: 65px;
+  margin-bottom: -55px;
+
+  hr {
+    max-width: 600px;
+    margin-top: 30px;
+    margin-bottom: -20px;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(101, 101, 101, 0.75), rgba(0, 0, 0, 0));
+  }
+}
 
 /*====== FOOTER ======*/
 

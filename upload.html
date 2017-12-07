@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Upload</title>
     <script src="scripts/jquery-3.2.1.min.js"></script>
 
     <link rel="stylesheet" href="styles/style.css">
@@ -27,11 +27,11 @@
                 </div>
             </li>
 
-            <!--<li class="right"><img class="avatar" src="http://static2.businessinsider.com/image/5899ffcf6e09a897008b5c04-1200/.jpg"></li>-->
-            <!--<li class="right"><a href="">Rizzle</a></li>-->
-            <li class="right"><a href="register.html">Register</a></li>
-            <li class="right"><a class="active" href="login.html">Login</a></li>
-            <!--<li class="right"><a href="">Admin</a></li>-->
+            <li class="right"><img class="avatar" src="http://static2.businessinsider.com/image/5899ffcf6e09a897008b5c04-1200/.jpg"></li>
+            <li class="right"><a href="">Rizzle</a></li>
+            <!--<li class="right"><a href="register.html">Register</a></li>-->
+            <!--<li class="right"><a href="login.html">Login</a></li>-->
+            <li class="right"><a href="admin.html">Admin</a></li>
             <li class="right upload shiny"><a href="upload.html">Upload</a></li>
         </ul>
 
@@ -57,16 +57,23 @@
 
 
 <div class="login-page">
-    <div class="form">
+    <div class="form  upload-form">
         <div class="row header">
-            <div class="large-12 columns">LOGIN</div>
+            <div class="large-12 columns">UPLOAD</div>
         </div>
 
         <form class="login-form">
-            <input type="text" placeholder="Username"/>
-            <input type="password" placeholder="Password"/>
-            <button class="btn btn--default shiny btn-login">login</button>
-            <p class="message">Not registered? <a href="register.html">Create an account</a></p>
+            <label for="title">Title</label>
+            <input id="title" type="text" placeholder="Title"/>
+
+            <label for="image">Image</label>
+            <input id="image" type="text" placeholder="Image"/>
+
+            <label for="description">Description</label>
+            <textarea id="description" placeholder="Description"></textarea>
+
+
+            <button class="btn btn--default shiny btn-login">Submit</button>
         </form>
     </div>
 </div>
