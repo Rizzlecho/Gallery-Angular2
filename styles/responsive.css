@@ -32,6 +32,10 @@
 
   #nav-icon4 {
     display: block;
-    transform: scale(0.7); } }
+    transform: scale(0.7); }
+
+  .login-page {
+    margin-left: 30px;
+    margin-right: 30px; } }
 
 /*# sourceMappingURL=responsive.css.map */

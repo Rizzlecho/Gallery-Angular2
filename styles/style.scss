@@ -66,7 +66,6 @@ a:hover, button:hover {
 
 /*END OF RESET*/
 
-
 .hor-line {
   max-width: 1164px;
   border: 0;
@@ -102,28 +101,39 @@ nav {
   float: right;
   position: relative;
   top: -30px;
+  > a {
+    transition: all 0.2s ease;
+    border-bottom: 2px solid transparent;
+    &:hover {
+      border-bottom: 2px solid $lightBlue;
+    }
+  }
 }
 
 .left {
   position: relative;
   top: -30px;
   float: left;
+   > a {
+    transition: all 0.2s ease;
+    border-bottom: 2px solid $blackBlue;
+    &:hover {
+      border-bottom: 2px solid $lightBlue;
+    }
+  }
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
   font-size: 20px;
-  padding: 10px;
+  padding: 10px 10px 23px 10px;
   transition: all 0.2s ease;
 
-  &:hover {
-    color: $lightBlue;
-  }
 }
 
 .active {
-  color: $lightBlue;
+  border-bottom: 2px solid $lightBlue !important;
 }
 
 /*======= DROP DOWN ======*/
@@ -143,7 +153,7 @@ nav ul li a {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 3;
   top: 59px;
-  left: -10px;
+  left: 0px;
 }
 
 /* Links inside the dropdown */
@@ -160,6 +170,7 @@ nav ul li a {
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
   border-left: 3px solid $lightBlue;
+
   color: white;
 }
 
@@ -495,6 +506,12 @@ h1.section-header {
   }
 }
 
+textarea {
+  &::placeholder {
+    font-family: Lato, Helvetica Neue, Arial, sans-serif;
+  }
+}
+
 /*====== COMMENTS ======*/
 
 .comments-section {
@@ -707,7 +724,7 @@ h1.section-header {
       color: #cacaca;
     }
   }
-  #title, #description, #image{
+  #title, #description, #image {
     margin-top: 30px;
   }
 }
@@ -730,6 +747,44 @@ h1.section-header {
   margin-top: -30px;
 }
 
+#select {
+  outline: 0;
+  background: rgba(91, 98, 115, 0.97);
+  color: white;
+  width: 100%;
+  border: 0;
+  margin: 30px 0 10px 0;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-left: 3px solid transparent;
+  transition: all 0.2s ease;
+  &:focus {
+    border-left: 3px solid white;
+  }
+  option {
+    padding: 10px;
+  }
+  &::placeholder {
+    color: #cacaca;
+  }
+
+}
+
+.profile-form {
+  margin: -20px auto 120px auto;
+  input {
+    margin: 30px 0 15px 0;
+  }
+
+  img {
+    border-radius: 50%;
+    max-width: 220px;
+    position: relative;
+    margin: 15px auto 30px auto;
+    display: block;
+  }
+}
 
 /*====== END LOGIN ======*/
 
