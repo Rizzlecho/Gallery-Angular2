@@ -1,0 +1,67 @@
+<nav>
+  <ul class="nav-bar">
+    <li class="left"><img class="avatar" src="../../../../assets/images/bull-logo.png"
+                          style="margin: 0 10px 20px 0 ; width: 60px;"/></li>
+    <li class="left"><a class="active" routerLink="/">Home</a></li>
+    <li class="left">
+      <a class="dropdown">Categories</a>
+      <div class="dropdown-content">
+        <a routerLink="/category">Abstract</a>
+        <a href="nature.html">Nature</a>
+        <a href="#">Sport</a>
+        <a href="#">Cities</a>
+        <a href="#">Vintage</a>
+        <a href="#">Cars</a>
+        <a href="#">Beauty</a>
+        <a href="#">Adverts</a>
+      </div>
+    </li>
+
+
+    <li *ngIf="loggedIn()" class="right"><img class="avatar dropdown2" src="http://static2.businessinsider.com/image/5899ffcf6e09a897008b5c04-1200/.jpg"></li>
+    <li *ngIf="loggedIn()" class="right"><a class="dropdown2" routerLink="/profile">{{username}}</a>
+      <!--OPTIONAL DROPDOWN-->
+      <!--<div class="dropdown-content">-->
+        <!--<a routerLink="/profile">Profile</a>-->
+        <!--<a (click)="logout()">Logout</a>-->
+      <!--</div>-->
+    </li>
+    <li *ngIf="loggedIn()" class="right"><a (click)="logout()">Logout</a></li>
+    <li *ngIf="!loggedIn()" class="right"><a routerLink="/login">Login</a></li>
+    <li *ngIf="!loggedIn()" class="right"><a routerLink="/register">Register</a></li>
+    <li *ngIf="loggedIn()" class="right"><a routerLink="/admin">Admin</a></li>
+
+    <li class="right upload shiny"><a routerLink="/upload">Upload</a></li>
+  </ul>
+
+
+  <div id="nav-icon4">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <ul class="mobile-menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li>
+      <a class="dropdown">Categories</a>
+      <div class="dropdown-content">
+        <a routerLink="/category">Abstract</a>
+        <a href="nature.html">Nature</a>
+        <a href="#">Sport</a>
+        <a href="#">Cities</a>
+        <a href="#">Vintage</a>
+        <a href="#">Cars</a>
+        <a href="#">Beauty</a>
+        <a href="#">Adverts</a>
+      </div>
+    </li>
+    <li><a href="#">Login</a></li>
+    <li><a href="#">Register</a></li>
+    <li><a href="#">Admin</a></li>
+    <li><a href="#">Rizzle</a></li>
+    <li class="shiny"><a href="#">Upload</a></li>
+  </ul>
+
+</nav>
+
