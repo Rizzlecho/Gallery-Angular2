@@ -13,9 +13,10 @@ import {Router} from "@angular/router";
 export class RegisterComponent implements OnInit {
   register: FormGroup;
   model: RegisterModel;
+  registerFail: boolean;
 
   constructor(private router: Router, private fb: FormBuilder, private remoteService: RemoteService) {
-    this.model = new RegisterModel('', '', 'user')
+    this.model = new RegisterModel('', '', 'user', 'http://s3.amazonaws.com/37assets/svn/765-default-avatar.png')
   }
 
   ngOnInit() {
@@ -34,12 +35,12 @@ export class RegisterComponent implements OnInit {
     this.model.password = this.register.value.auth['password'];
 
     this.remoteService.register(this.model).subscribe(data =>{
-           // this.successfulRegister(data)
           console.log(data);
            this.router.navigate(['/login']);
           },
           err => {
             console.log(err.message);
+            this.registerFail = true;
           })
     }
 

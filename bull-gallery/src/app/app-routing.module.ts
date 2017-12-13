@@ -7,17 +7,20 @@ import {UploadComponent} from "./components/upload/upload.component";
 import {LoginComponent} from "./components/auth/login/login.component";
 import {RegisterComponent} from "./components/auth/register/register.component";
 import {ProfileComponent} from "./components/profile/profile.component";
-import {AuthGuard} from "./services/guards/auth.guard";
 import {AdminComponent} from "./components/admin/admin.component";
+
+import {AuthGuard} from "./services/guards/auth.guard";
+
+
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', component:HomeComponent},
   {path: 'category', component: CategoryComponent},
-  {path: 'upload', canActivate:[AuthGuard], component: UploadComponent},
-  {path: 'admin', canActivate:[AuthGuard], component: AdminComponent},
+  {path: 'upload', component: UploadComponent},
+  {path: 'admin',  component: AdminComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'profile', canActivate:[AuthGuard], component: ProfileComponent},
+  {path: 'profile',  component: ProfileComponent},
 ];
 
 

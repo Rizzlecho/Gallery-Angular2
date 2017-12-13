@@ -1,12 +1,27 @@
-import { Injectable } from '@angular/core';
-import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
-import { Observable } from 'rxjs/Observable';
+import {Injectable} from '@angular/core';
+import {ActivatedRouteSnapshot, RouterStateSnapshot, CanActivate, CanLoad, Router, Route} from '@angular/router';
+import {RemoteService} from "../remote/remote.service";
+
 
 @Injectable()
-export class AuthGuard implements CanActivate {
-  canActivate(
-    next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-    return true;
+export class AuthGuard implements CanActivate, CanLoad {
+  constructor(private remoteService: RemoteService, private router: Router) {
+  }
+
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+    return this.checkLoggedIn(state.url);
+  }
+
+  canLoad(route: Route): boolean {
+    return this.checkLoggedIn(route.path);
+  }
+
+  checkLoggedIn(url: string): boolean {
+    if (this.remoteService.isLoggedIn()) {
+      return true;
+    }
+
+    this.router.navigate(['/login']);
+    return false;
   }
 }
