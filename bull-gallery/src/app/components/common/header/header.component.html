@@ -18,18 +18,18 @@
     </li>
 
 
-    <li *ngIf="loggedIn()" class="right"><img class="avatar dropdown2" src=''></li>
-    <li *ngIf="loggedIn()" class="right"><a routerLink="/profile">{{username}}</a>
+    <li *ngIf="loggedIn()" class="right"><img routerLink="/profile" class="avatar dropdown2" src={{avatar}}></li>
+    <li *ngIf="loggedIn()" class="right dropdown2"><a (click)="dropdown2()" class="dropdown2">{{username}}</a>
       <!--OPTIONAL DROPDOWN-->
-      <!--<div class="dropdown-content">-->
-        <!--<a routerLink="/profile">Profile</a>-->
-        <!--<a (click)="logout()">Logout</a>-->
-      <!--</div>-->
+      <div class="dropdown-content dropdown-content2">
+        <a routerLink="/profile">Profile</a>
+        <a (click)="logout()">Logout</a>
+      </div>
     </li>
     <li *ngIf="loggedIn()" class="right"><a (click)="logout()">Logout</a></li>
     <li *ngIf="!loggedIn()" class="right"><a routerLink="/login">Login</a></li>
     <li *ngIf="!loggedIn()" class="right"><a routerLink="/register">Register</a></li>
-    <li *ngIf="loggedIn()" class="right"><a routerLink="/admin">Admin</a></li>
+    <li *ngIf="loggedIn()" (click)="func()" class="right"><a routerLink="/admin">Admin</a></li>
 
     <li class="right upload shiny"><a routerLink="/upload">Upload</a></li>
   </ul>

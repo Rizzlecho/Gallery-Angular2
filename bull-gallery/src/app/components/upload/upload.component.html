@@ -18,7 +18,7 @@
       <input formControlName="image" id="image" type="text" placeholder="Image"/>
 
       <label for="select">Category</label>
-      <select [formControlName]="category" name="category" id="select">
+      <select (change) ="onChange($event.target.value)"  name="category" id="select">
         <option value="category" class="option" disabled selected>choose a category</option>
         <option value="Sports" class="option">Sports</option>
         <option value="Nature" class="option">Nature</option>

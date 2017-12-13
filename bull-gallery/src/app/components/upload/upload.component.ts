@@ -19,9 +19,11 @@ export class UploadComponent implements OnInit {
   imageFail: boolean;
   categoryFail: boolean;
   descriptionFail: boolean;
+  category;
+  categoriesArr: any;
 
   constructor(private router: Router, private fb: FormBuilder, private remoteService: RemoteService) {
-    this.model = new UploadModel('', '', '', '', [{}])
+    this.model = new UploadModel('', '', '', '', localStorage.getItem('username'),0,[{}])
   }
 
   ngOnInit() {
@@ -30,14 +32,20 @@ export class UploadComponent implements OnInit {
       image: ['', [Validators.required]],
       category: ['', [Validators.required]],
       description: ['', [Validators.required]],
-    })
+    });
+
   }
 
-  submit() {
+  onChange(category){
+    this.category = category;
 
+  }
+
+
+  submit() {
     this.model.title = this.upload.value['title'];
     this.model.image = this.upload.value['image'];
-    this.model.category = this.upload.value['category'];
+    this.model.category = this.category;
     this.model.description = this.upload.value['description'];
 
 
@@ -51,15 +59,22 @@ export class UploadComponent implements OnInit {
       this.imageFail = true;
       return
     }
-    // else if(this.model.category === ''){
-    //   this.categoryFail = true;
-    //   return
-    // }
-    else if(this.model.description === ''){
+    else if(this.category === '' || this.category === null|| this.category === undefined){
       this.imageFail = false;
+      this.categoryFail = true;
+      return
+    }
+    else if(this.model.description === ''){
+      this.categoryFail = false;
       this.descriptionFail = true;
       return
     }
+
+    // this..get('category')
+    //   .valueChanges
+    //   .subscribe(category=> {
+    //     console.log(category);
+    //   });
 
 
 
@@ -74,7 +89,14 @@ export class UploadComponent implements OnInit {
   }
 
   successfulUpload(): void {
+      // let categoryArr = [];
+    // if(!this.categoriesArr.includes(this.category)){
+      this.categoriesArr.push(this.category);
+    // }
+    console.log('Categories arr = ' + this.categoriesArr);
     this.uploadFail = false;
     this.router.navigate(['/']);
   }
+
+
 }

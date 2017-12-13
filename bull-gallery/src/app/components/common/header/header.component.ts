@@ -11,14 +11,11 @@ import {RemoteService} from "../../../services/remote/remote.service";
 })
 export class HeaderComponent implements OnInit {
   public username: string;
-  public isLogged;
   public avatar: string;
-  public users;
-
+  public logged = false;
 
   constructor(public remoteService: RemoteService, private router: Router) {
     this.username = localStorage.getItem('username');
-    // this.avatar2 = registerModel.avatar;
 
   }
 
@@ -27,13 +24,7 @@ export class HeaderComponent implements OnInit {
     this.dropdown();
 
     this.remoteService.userDetais().subscribe(data => {
-        this.users = data;
-        console.log(this.users);
-
-        // for (let obj of this.users) {
-        //   this.avatar = obj.avatar;
-        //   console.log(this.avatar);
-        // }
+        this.avatar = data[0]['avatar'];
       },
       err => {
         console.log(err.message);
@@ -41,15 +32,9 @@ export class HeaderComponent implements OnInit {
   }
 
   private dropdown() {
-    console.log('in dropdown');
+    // console.log('in dropdown');
 
     $('.dropdown').click(function (e) {
-      e.preventDefault();
-      $(this).next('.dropdown-content').slideToggle('fast');
-    });
-
-    $('.dropdown2').click(function (e) {
-      console.log('in 2');
       e.preventDefault();
       $(this).next('.dropdown-content').slideToggle('fast');
     });
@@ -61,11 +46,31 @@ export class HeaderComponent implements OnInit {
     });
   }
 
+  dropdown2() {
+    $('.dropdown2').click(function (e) {
+      console.log('in 2');
+      e.preventDefault();
+      if ($('.dropdown2').hasClass('up')) {
+        $(this).next('.dropdown-content2').removeClass('up').addClass('down').slideDown('fast');
+      }
+    });
+
+    $('.dropdown2').click(function (e) {
+      console.log('in 2');
+      e.preventDefault();
+      if ($('.dropdown2').hasClass('down')) {
+        $(this).next('.dropdown-content2').removeClass('down').addClass('up').slideUp('fast');
+      }
+    });
+
+  }
+
+  func() {
+    console.log(this.logged);
+  }
 
   loggedIn() {
-    if (localStorage.getItem('authtoken')) {
-      return true;
-    } else return false;
+    return !!localStorage.getItem('authtoken');
   }
 
   logout() {

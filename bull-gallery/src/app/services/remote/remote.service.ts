@@ -15,8 +15,10 @@ const loginUrl = `https://baas.kinvey.com/user/${appKey}/login`;
 const logoutUrl = `https://baas.kinvey.com/user/${appKey}/_logout`;
 const postsUrl = `https://baas.kinvey.com/appdata/${appKey}/posts`;
 const listAllPostUrl = `https://baas.kinvey.com/appdata/${appKey}/posts?query={}&sort={"_kmd.ect": -1}`;
+const listMostViewedUrl = `https://baas.kinvey.com/appdata/${appKey}/posts?query={}&sort={"counter": -1}`;
+const postDetailsUrl = `https://baas.kinvey.com/appdata/${appKey}/posts/`;
 
-const userDetails = `https://baas.kinvey.com/user/${appKey}/?query="avatar"`;
+const userDetails = `https://baas.kinvey.com/user/${appKey}?query={"username":"${localStorage.getItem('username')}"}`;
 
 @Injectable()
 export class RemoteService {
@@ -47,6 +49,16 @@ export class RemoteService {
     )
   }
 
+  editProfile(registerModel: RegisterModel): Observable<Object> {
+    return this.http.put(
+      registerUrl,
+      JSON.stringify(registerModel),
+      {
+        headers: this.createAuthHeaders('Kinvey')
+      }
+    )
+  }
+
   upload(uploadModel: UploadModel) {
     return this.http.post(
       postsUrl,
@@ -67,9 +79,27 @@ export class RemoteService {
     )
   }
 
+  listMostViewed(){
+    return this.http.get(
+      listMostViewedUrl,
+      {
+        headers: this.createAuthHeaders('Kinvey')
+      }
+    )
+  }
+
   userDetais(){
     return this.http.get(
       userDetails,
+      {
+        headers: this.createAuthHeaders('Kinvey')
+      }
+    )
+  }
+
+  postDetails(postId){
+    return this.http.get(
+      postDetailsUrl + postId,
       {
         headers: this.createAuthHeaders('Kinvey')
       }
@@ -86,18 +116,11 @@ export class RemoteService {
     )
   }
 
-  isLoggedIn() {
-    let authtoken: string = localStorage.getItem('authtoken');
-    return authtoken === this.currentAuthtoken;
+  loggedIn() {
+    return !!localStorage.getItem('authtoken');
   }
 
-  get authtoken() {
-    return this.currentAuthtoken;
-  }
 
-  set authtoken(value: string) {
-    this.currentAuthtoken = value;
-  }
 
   private createAuthHeaders(type: string): HttpHeaders {
     if (type === 'Basic') {

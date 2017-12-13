@@ -4,6 +4,8 @@ export class UploadModel {
     public image : string,
     public category : string,
     public description: string,
+    public creator: string,
+    public counter: number,
     public comments: [{}]
   ) { }
 }

@@ -9,7 +9,12 @@ export class AuthGuard implements CanActivate, CanLoad {
   }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    return this.checkLoggedIn(state.url);
+    let checker = !!localStorage.getItem('authtoken');
+    if (checker) {
+      return checker;
+    }
+    this.router.navigate(['/login']);
+    return false
   }
 
   canLoad(route: Route): boolean {
@@ -17,11 +22,13 @@ export class AuthGuard implements CanActivate, CanLoad {
   }
 
   checkLoggedIn(url: string): boolean {
-    if (this.remoteService.isLoggedIn()) {
+    if (this.remoteService.loggedIn()) {
       return true;
     }
 
     this.router.navigate(['/login']);
     return false;
   }
+
+
 }

@@ -1,18 +1,30 @@
-
-<div class="tile-group">
+<div *ngIf="loader" class="loader">
+  <ul class="hexagon-container">
+    <li class="hexagon hex_1"></li>
+    <li class="hexagon hex_2"></li>
+    <li class="hexagon hex_3"></li>
+    <li class="hexagon hex_4"></li>
+    <li class="hexagon hex_5"></li>
+    <li class="hexagon hex_6"></li>
+    <li class="hexagon hex_7"></li>
+  </ul>
+</div>
+<div class="tile-group"  *ngIf="!loader">
   <div class="tile-group-header">
     <h1 class="section-header pull-left">Recently Uploaded Images</h1>
   </div>
 
   <div class="tile-group-inner">
-    <a *ngFor="let article of articles  | paginate: { itemsPerPage: 6, currentPage: p }"  class="tile" [style.background-image]="'url(' + article.image + ')'">
+
+    <a *ngFor="let article of articles  | paginate: { itemsPerPage: 6, currentPage: p }" class="tile"
+       [style.background-image]="'url(' + article?.image + ')'" (click)="countClicks($event); details(article?._id)">
 
       <!--<img class="tile-img" *ngIf="article.image" src="{{article.image}}">-->
       <!--<img class="tile-img" *ngIf="!article.image.endsWith('.png') || !article.image.endsWith('.jpg')" src="../../../assets/images/bull-logo.png">-->
 
       <div class="tile--content-wrap">
         <div class="tile--content"><p class="tile--date">{{calcTime(article._kmd['lmt'])}} ago</p>
-          <h2 class="">{{article.title}}</h2>
+          <h2 class="">{{article?.title}}</h2>
         </div>
         <button class="btn tile--btn btn--default shiny">Details</button>
       </div>
@@ -27,18 +39,34 @@
   </div>
 </div>
 
-<hr class="hor-line">
+<hr *ngIf="!loader" class="hor-line">
 
-<div class="tile-group">
+<div *ngIf="!loader" class="tile-group">
   <div class="tile-group-header">
     <h1 class="section-header pull-left">Most Viewed Images</h1>
   </div>
 
   <div class="tile-group-inner">
-    Articles here
+    <a *ngFor="let article of viewsArticles  | paginate: { itemsPerPage: 6, currentPage: p }" class="tile"
+       [style.background-image]="'url(' + article?.image + ')'">
+
+      <!--<img class="tile-img" *ngIf="article.image" src="{{article.image}}">-->
+      <!--<img class="tile-img" *ngIf="!article.image.endsWith('.png') || !article.image.endsWith('.jpg')" src="../../../assets/images/bull-logo.png">-->
+
+      <div class="tile--content-wrap">
+        <div class="tile--content">
+          <p class="tile--date">20 views</p>
+          <p class="tile--date">{{calcTime(article._kmd['lmt'])}} ago</p>
+          <h2 class="">{{article.title}}</h2>
+        </div>
+        <button class="btn tile--btn btn--default shiny">Details</button>
+      </div>
+
+      <div class="tile-bg"></div>
+    </a>
   </div>
 
   <div class="pagination">
-    <p><span>&lt;</span><span>1</span><span>2</span><span>3</span><span>4</span><span>&gt;</span></p>
+    <!--<pagination-controls (pageChange)="p = $event"></pagination-controls>-->
   </div>
 </div>

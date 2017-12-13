@@ -1,48 +1,34 @@
 import {Component, OnInit} from '@angular/core';
 import {RemoteService} from "../../services/remote/remote.service";
-import {Router} from "@angular/router";
-import {NgxPaginationModule} from "ngx-pagination/dist/ngx-pagination";
-
+import {ActivatedRoute, Route, Router} from "@angular/router";
+import {Location} from "@angular/common"
 
 @Component({
-  selector: 'bull-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'bull-details',
+  templateUrl: './details.component.html',
+  styleUrls: ['./details.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class DetailsComponent implements OnInit {
+
   public title: string;
-  articles;
-  viewsArticles;
+  article;
   image;
   counter = 0;
-  loader: boolean = true;
-
-  constructor(private remoteService: RemoteService, private router: Router) {
+  username;
+  constructor(private remoteService: RemoteService, private route: ActivatedRoute, private location: Location) {
+    this.username = localStorage.getItem('username')
   }
+
 
   ngOnInit() {
-    this.remoteService.listAllPosts().subscribe(data => {
-        this.articles = data;
-        this.loader = false;
-      },
-      err => {
-        console.log(err.message);
-      });
-    // console.log('Counter = ' + this.counter);
+    const id = this.route.snapshot.paramMap.get('id');
+    console.log(id);
 
-    this.remoteService.listMostViewed().subscribe(data => {
-        this.viewsArticles = data;
-      },
-      err => {
-        console.log(err.message);
-      });
-  }
+    this.remoteService.postDetails(id).subscribe(data => {
+        // console.log(data);
+        this.article = data;
+        console.log(this.article.creator);
 
-  details(e) {
-    this.remoteService.postDetails(e).subscribe(data => {
-        this.articles = data;
-        console.log('details func');
-        this.router.navigate([`/details/${e}`]);
       },
       err => {
         console.log(err.message);
@@ -50,7 +36,7 @@ export class HomeComponent implements OnInit {
 
   }
 
-  countClicks(e) {
+  countClicks(e){
     this.counter++;
     console.log('Counter = ' + this.counter);
   }

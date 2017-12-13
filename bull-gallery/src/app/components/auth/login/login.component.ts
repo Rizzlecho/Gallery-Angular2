@@ -45,12 +45,12 @@ export class LoginComponent implements OnInit {
 
 
   successfulLogin(data): void {
-    this.remoteService.authtoken = data['_kmd']['authtoken'];
+    this.remoteService.loggedIn();
     localStorage.setItem('authtoken', data['_kmd']['authtoken']);
     localStorage.setItem('username', data['username']);
     this.loginFail = false;
     this.router.navigate(['/']);
-    window.location.reload();
+    // window.location.reload();
   }
 
 }

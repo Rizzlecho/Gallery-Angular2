@@ -8,6 +8,7 @@ import {LoginComponent} from "./components/auth/login/login.component";
 import {RegisterComponent} from "./components/auth/register/register.component";
 import {ProfileComponent} from "./components/profile/profile.component";
 import {AdminComponent} from "./components/admin/admin.component";
+import {DetailsComponent} from "./components/details/details.component";
 
 import {AuthGuard} from "./services/guards/auth.guard";
 
@@ -16,11 +17,12 @@ import {AuthGuard} from "./services/guards/auth.guard";
 const routes: Routes = [
   {path: '', pathMatch: 'full', component:HomeComponent},
   {path: 'category', component: CategoryComponent},
-  {path: 'upload', component: UploadComponent},
-  {path: 'admin',  component: AdminComponent},
+  {path: 'details/:id', component: DetailsComponent},
+  {path: 'upload', canActivate:[AuthGuard], component: UploadComponent},
+  {path: 'admin', canActivate:[AuthGuard], component: AdminComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'profile',  component: ProfileComponent},
+  {path: 'profile',canActivate:[AuthGuard],  component: ProfileComponent},
 ];
 
 

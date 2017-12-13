@@ -15,6 +15,7 @@ import {LoginComponent} from './components/auth/login/login.component';
 import {RegisterComponent} from './components/auth/register/register.component';
 import {ProfileComponent} from './components/profile/profile.component';
 import {AdminComponent} from './components/admin/admin.component';
+import { DetailsComponent } from './components/details/details.component';
 
 
 import {AuthGuard} from "./services/guards/auth.guard";
@@ -33,6 +34,7 @@ import {RemoteService} from "./services/remote/remote.service";
     RegisterComponent,
     ProfileComponent,
     AdminComponent,
+    DetailsComponent,
 
   ],
   imports: [
