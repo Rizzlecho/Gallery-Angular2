@@ -12,17 +12,17 @@ import {Router} from "@angular/router";
 })
 export class UploadComponent implements OnInit {
 
-  upload: FormGroup;
-  model: UploadModel;
-  uploadFail: boolean;
-  titleFail: boolean;
-  imageFail: boolean;
-  categoryFail: boolean;
-  descriptionFail: boolean;
-  validCategory: boolean = false;
-  ifNotValid: boolean;
-  category;
-  categoriesArr: any;
+  public upload: FormGroup;
+  public model: UploadModel;
+  public uploadFail: boolean;
+  public titleFail: boolean;
+  public imageFail: boolean;
+  public categoryFail: boolean;
+  public descriptionFail: boolean;
+  public validCategory: boolean = false;
+  public ifNotValid: boolean;
+  public category: any;
+  public categoriesArr: any;
 
   constructor(private router: Router, private fb: FormBuilder, private remoteService: RemoteService) {
     this.model = new UploadModel('', '', '', '', localStorage.getItem('username'), 0)
@@ -31,6 +31,7 @@ export class UploadComponent implements OnInit {
   ngOnInit() {
     let arr = [];
 
+    // FORM GROUP
     this.upload = this.fb.group({
       title: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(22)]],
       image: ['', [Validators.required]],
@@ -38,6 +39,7 @@ export class UploadComponent implements OnInit {
       description: ['', [Validators.required]],
     });
 
+    // GET ALL CATEGORIES FROM COLLECTION
     this.remoteService.getCategories().subscribe((data) => {
         for (let obj in data) {
           arr.push(data[obj]['category']);
@@ -51,12 +53,14 @@ export class UploadComponent implements OnInit {
 
   }
 
+  // CATEGORY FROM OPTION
   onChange(category) {
     this.category = category;
 
   }
 
 
+  // UPLOAD IMAGE
   submit() {
     this.model.title = this.upload.value['title'];
     this.model.image = this.upload.value['image'];

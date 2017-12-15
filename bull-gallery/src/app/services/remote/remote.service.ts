@@ -165,7 +165,7 @@ export class RemoteService {
   }
 
 
-  userDetails() {
+  getUserDetails() {
     return this.http.get(
       userDetails,
       {

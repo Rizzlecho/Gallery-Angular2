@@ -13,13 +13,13 @@ import {FormsModule} from "@angular/forms";
 export class DetailsComponent implements OnInit {
   public title: string;
   public model: CommentModel;
-  public article;
-  public image;
+  public article: any;
+  public image: any;
   public counter = 0;
-  public username;
-  public comment;
-  public role;
-  public postId;
+  public username: any;
+  public comment: any;
+  public role: any;
+  public postId: any;
   public commentFail: boolean;
   public arr = [];
 
@@ -30,11 +30,10 @@ export class DetailsComponent implements OnInit {
 
 
   ngOnInit() {
-    let arr = [];
-
     this.postId = this.route.snapshot.paramMap.get('id');
 
 
+    // GET POST DETAILS
     this.remoteService.postDetails(this.postId).subscribe(data => {
         this.article = data;
 
@@ -43,7 +42,8 @@ export class DetailsComponent implements OnInit {
         this.router.navigate([`/**`]);
       });
 
-    this.remoteService.userDetails().subscribe(data => {
+    // GET USER DETAILS
+    this.remoteService.getUserDetails().subscribe(data => {
         this.role = data[0]['role'];
       },
       err => {
@@ -55,6 +55,7 @@ export class DetailsComponent implements OnInit {
 
   }
 
+  // CREATE COMMENT SUBMIT
   submit() {
     this.model.username = this.username;
     this.model.postId = this.postId;
@@ -74,6 +75,7 @@ export class DetailsComponent implements OnInit {
     this.router.navigate([`/details/${this.postId}`]);
   }
 
+  // GET ALL COMMENTS
   getAllComments() {
 
     this.remoteService.getAllComments(this.postId).subscribe(data => {
@@ -89,6 +91,7 @@ export class DetailsComponent implements OnInit {
       });
   }
 
+  // DELETE COMMENT
   deleteComment(id) {
     this.remoteService.deleteComment(id).subscribe(data => {
         this.router.navigate([`/details/${this.postId}`]);
@@ -99,6 +102,8 @@ export class DetailsComponent implements OnInit {
       });
   }
 
+
+  // DELETE POST
   deletePost() {
     const id = this.route.snapshot.paramMap.get('id');
 
@@ -111,9 +116,11 @@ export class DetailsComponent implements OnInit {
       });
   }
 
+  // NAVIGATE TO EDIT PAGE OF CLICKED POST
   editPostNavigate() {
     this.router.navigate(['/edit/' + this.route.snapshot.paramMap.get('id')])
   }
+
 
   isAdmin() {
     if (this.role === 'admin') {
@@ -125,7 +132,6 @@ export class DetailsComponent implements OnInit {
   countClicks(e) {
     this.counter++;
   }
-
 
   calcTime(dateIsoFormat) {
 

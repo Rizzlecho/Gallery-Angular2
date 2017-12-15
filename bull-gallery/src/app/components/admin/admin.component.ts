@@ -29,6 +29,7 @@ export class AdminComponent implements OnInit {
 
     let arr = [];
 
+    // GET ALL CATEGORIES
     this.remoteService.getCategories().subscribe((data) => {
         for (let obj in data) {
           arr.push(data[obj]['category']);
@@ -41,6 +42,8 @@ export class AdminComponent implements OnInit {
     this.categoriesArr = arr;
   }
 
+
+  // CREATE CATEGORY POST
   createCategory(){
     this.model = this.createNewCategory.value;
     this.remoteService.createCategory(this.model).subscribe(data =>{
@@ -52,10 +55,13 @@ export class AdminComponent implements OnInit {
       })
   }
 
+  // GET CATEGORY FROM OPTION
   onChange(category){
     this.category = category;
   }
 
+
+  // DELETE CATEGORY
   deleteCategory(){
     this.remoteService.deleteCategory(this.category).subscribe((data) => {
         window.location.reload();

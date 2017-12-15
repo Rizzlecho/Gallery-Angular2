@@ -14,7 +14,7 @@ export class ProfileComponent implements OnInit {
   public username: string;
   public avatar: string;
   public editProfile: FormGroup;
-  public model;
+  public model: any;
   public id: string;
 
   constructor(public remoteService: RemoteService, private router: Router, private fb: FormBuilder,) {
@@ -24,7 +24,8 @@ export class ProfileComponent implements OnInit {
 
 
   ngOnInit() {
-    this.remoteService.userDetails().subscribe(data => {
+    // GET USER DETAILS
+    this.remoteService.getUserDetails().subscribe(data => {
 
         this.avatar = data[0]['avatar'];
         this.id = data[0]['_id']
@@ -38,6 +39,7 @@ export class ProfileComponent implements OnInit {
     })
   }
 
+  // UPDATE USER AVATAR
   update(e) {
     this.model.avatar = e.value.newAvatar;
 

@@ -12,7 +12,8 @@ export class AdminGuard implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
 
-    this.remoteService.userDetails().subscribe(data => {
+    // CHECK ROLE
+    this.remoteService.getUserDetails().subscribe(data => {
         this.role = data[0]['role'];
       },
       err => {

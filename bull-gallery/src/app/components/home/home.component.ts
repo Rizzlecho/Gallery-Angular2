@@ -11,11 +11,11 @@ import {NgxPaginationModule} from "ngx-pagination/dist/ngx-pagination";
 })
 export class HomeComponent implements OnInit {
   public title: string;
-  articles;
-  viewsArticles;
-  image;
-  counter = 0;
-  loader: boolean = true;
+  public articles: any;
+  public viewsArticles: any;
+  public image: any;
+  public counter = 0;
+  public loader: boolean = true;
 
   constructor(private remoteService: RemoteService, private router: Router) {
   }
@@ -40,10 +40,10 @@ export class HomeComponent implements OnInit {
       });
   }
 
+  // REDIRECT TO POST DETAILS
   details(e) {
     this.remoteService.postDetails(e).subscribe(data => {
         this.articles = data;
-        // this.router.navigate([`/details/${e}`]);
       },
       err => {
         console.log(err.message);

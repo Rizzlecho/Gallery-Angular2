@@ -1,9 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, DoCheck} from '@angular/core';
 import * as $ from 'jquery';
 
 import {Router, RouterModule, RouterLink} from '@angular/router';
 import {RemoteService} from "../../../services/remote/remote.service";
-import {CommonModule} from "@angular/common/src/common";
 
 @Component({
   selector: 'bull-header',
@@ -28,7 +27,7 @@ export class HeaderComponent implements OnInit {
     let arr = [];
 
     // GET USER DETAILS
-    this.remoteService.userDetails().subscribe(data => {
+    this.remoteService.getUserDetails().subscribe(data => {
         this.avatar = data[0]['avatar'];
         this.role = data[0]['role'];
       },
@@ -50,18 +49,19 @@ export class HeaderComponent implements OnInit {
     this.categoriesArr = arr;
   }
 
+
+
+  // NAVIGATE TO CATEGORY URL
   clickCategory(categ) {
     this.remoteService.listAllPostsFromCategory(categ).subscribe(data => {
+
         this.router.navigate([`/category/${categ}`]);
+        window.location.reload();
       },
       err => {
         console.log(err.message);
       });
-    console.log(categ);
-
-
-    // window.location.reload();
-  }
+     }
 
   private dropdown() {
     $('.dropdown').click(function (e) {

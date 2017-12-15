@@ -24,7 +24,6 @@ import {AuthGuard} from "./services/guards/auth.guard";
 import {AdminGuard} from "./services/guards/admin.guard";
 import {RemoteService} from "./services/remote/remote.service";
 import { ErrorComponent } from './components/error/error.component';
-// import { CommentsComponent } from './components/comments/comments.component';
 
 
 @NgModule({

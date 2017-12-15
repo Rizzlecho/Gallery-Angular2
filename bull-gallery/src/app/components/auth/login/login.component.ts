@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
     })
   }
 
+  // SUBMIT LOGIN FORM
   submit(): void {
     this.model.username = this.login.value['username'];
     this.model.password = this.login.value['password'];

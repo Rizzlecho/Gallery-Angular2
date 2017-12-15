@@ -21,10 +21,10 @@ export class EditPostComponent implements OnInit {
   public descriptionFail: boolean;
   public validCategory: boolean = false;
   public ifNotValid: boolean;
-  public category;
+  public category: any;
   public categoriesArr: any;
-  public article;
-  public id;
+  public article: any;
+  public id: any;
 
   constructor(private router: Router, private fb: FormBuilder, private remoteService: RemoteService, private route: ActivatedRoute) {
     this.model = new UploadModel('', '', '', '', localStorage.getItem('username'), 0);
@@ -43,6 +43,7 @@ export class EditPostComponent implements OnInit {
     });
 
 
+    // GET POST DETAILS
     this.remoteService.postDetails(this.id).subscribe(data => {
         this.article = data;
 
@@ -57,6 +58,8 @@ export class EditPostComponent implements OnInit {
         console.log(err.message);
       });
 
+
+    // GET ALL CATEGORIES FROM COLLECTION
     this.remoteService.getCategories().subscribe((data) => {
         for (let obj in data) {
           arr.push(data[obj]['category']);
@@ -76,6 +79,7 @@ export class EditPostComponent implements OnInit {
   }
 
 
+  // TO SAVE CHANGES FROM EDIT POST
   submit() {
     this.model.title = this.editPostGroup.value['title'];
     this.model.image = this.editPostGroup.value['image'];
@@ -119,7 +123,7 @@ export class EditPostComponent implements OnInit {
     /////////////////////////////
 
 
-
+    // PUT EDIT POST
     this.remoteService.editPost(this.model, this.id).subscribe(data => {
 
         this.successfulEditPost();

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, DoCheck, OnInit} from '@angular/core';
 import {RemoteService} from "../../services/remote/remote.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {NgxPaginationModule} from "ngx-pagination/dist/ngx-pagination";
@@ -10,11 +10,11 @@ import {NgxPaginationModule} from "ngx-pagination/dist/ngx-pagination";
 })
 export class CategoryComponent implements OnInit {
   public title: string;
-  articles;
-  image;
-  counter = 0;
-  loader: boolean = true;
-  categoryFilter;
+  public articles: any;
+  public image: any;
+  public counter = 0;
+  public loader: boolean = true;
+  public categoryFilter: any;
 
   constructor(private remoteService: RemoteService, private router: Router, private route: ActivatedRoute) {
   }
@@ -50,6 +50,8 @@ export class CategoryComponent implements OnInit {
 
   }
 
+
+  // REDIRECT TO GET POST DETAILS
   details(e) {
     this.remoteService.postDetails(e).subscribe(data => {
         this.articles = data;
@@ -61,6 +63,8 @@ export class CategoryComponent implements OnInit {
 
   }
 
+
+  // TODO
   countClicks(e) {
     this.counter++;
   }

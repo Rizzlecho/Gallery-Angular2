@@ -13,18 +13,19 @@ import {PasswordValidation} from './validatePassword'
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-  register: FormGroup;
-  model: RegisterModel;
-  registerFail: boolean;
-  userN;
-  passW;
-  confirmP;
+  public register: FormGroup;
+  public model: RegisterModel;
+  public registerFail: boolean;
+  public userN: any;
+  public passW: any;
+  public confirmP: any;
 
   constructor(private router: Router, private fb: FormBuilder, private remoteService: RemoteService) {
     this.model = new RegisterModel('', '', 'user', 'http://s3.amazonaws.com/37assets/svn/765-default-avatar.png')
   }
 
   ngOnInit() {
+    // FORM GROUP REGISTER
     this.register = this.fb.group({
       username: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(12)]],
       auth: this.fb.group({
@@ -36,6 +37,7 @@ export class RegisterComponent implements OnInit {
     })
   }
 
+  // SUBMIT REGISTER MODEL
   submit() {
     this.model.username = this.register.value['username'];
     this.model.password = this.register.value.auth['password'];
@@ -56,6 +58,7 @@ export class RegisterComponent implements OnInit {
       return
     }
 
+    // POST REGISTER
     this.remoteService.register(this.model).subscribe(data => {
         this.successfulRegister();
         this.router.navigate(['/login']);
