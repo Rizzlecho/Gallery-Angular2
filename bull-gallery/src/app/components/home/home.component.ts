@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit {
   details(e) {
     this.remoteService.postDetails(e).subscribe(data => {
         this.articles = data;
-        this.router.navigate([`/details/${e}`]);
+        // this.router.navigate([`/details/${e}`]);
       },
       err => {
         console.log(err.message);

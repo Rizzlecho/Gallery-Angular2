@@ -52,8 +52,6 @@ export class EditPostComponent implements OnInit {
           category: [data['category']],
           description: [data['description']]
         });
-
-
       },
       err => {
         console.log(err.message);

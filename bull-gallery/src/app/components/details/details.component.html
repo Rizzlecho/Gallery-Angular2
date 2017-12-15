@@ -35,18 +35,18 @@
 
         <p *ngIf="commentFail">Enter comment</p>
         <div class="submit">
-          <textarea (input)="textValue = $event.target.value"  class="text-area" name="commentArea" cols="50" rows="5"></textarea>
+          <textarea [(ngModel)]="model.comment" name="comment" class="text-area" cols="50" rows="5"></textarea>
           <button (click)="submit()" type="submit" class="btn btn--default shiny btn-edit">Submit</button>
         </div>
 
-        <span *ngIf="commentsArr.length !== 0">
-          <div *ngFor="let comment of commentsArr" class="comment">
+        <span *ngIf="arr">
+          <div *ngFor="let comment of arr" class="comment">
             <span *ngIf="comment.username === username || isAdmin()"><span class="hiks" (click)="deleteComment(comment._id)">x</span></span>
             <p class="uploaded-by">{{calcTime(comment._kmd.lmt)}} by {{comment.username}}</p>
             <p>{{comment.comment}}</p>
           </div>
         </span>
-        <p *ngIf="commentsArr.length === 0">No comments yet.</p>
+        <p *ngIf="arr.length === 0">No comments yet.</p>
 
 
       </div>
@@ -55,3 +55,5 @@
 
   </div>
 </main>
+
+<!--<textarea (input)="textValue = $event.target.value"  class="text-area" name="commentArea" cols="50" rows="5"></textarea>-->

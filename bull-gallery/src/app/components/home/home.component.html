@@ -17,7 +17,7 @@
   <div class="tile-group-inner">
 
     <a *ngFor="let article of articles  | paginate: { itemsPerPage: 6, currentPage: p }" class="tile"
-       [style.background-image]="'url(' + article?.image + ')'" (click)="countClicks($event); details(article?._id)">
+       [style.background-image]="'url(' + article?.image + ')'" (click)="countClicks($event); details(article?._id) "  routerLink="/details/{{article?._id}}">
 
       <div class="tile--content-wrap">
         <div class="tile--content"><p class="tile--date">{{calcTime(article._kmd['lmt'])}} ago</p>

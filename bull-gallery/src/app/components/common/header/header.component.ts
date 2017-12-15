@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
   public categoriesArr: any;
   public role: string;
 
+
   constructor(public remoteService: RemoteService, private router: Router) {
     this.username = localStorage.getItem('username');
 
@@ -26,6 +27,7 @@ export class HeaderComponent implements OnInit {
     this.dropdown();
     let arr = [];
 
+    // GET USER DETAILS
     this.remoteService.userDetails().subscribe(data => {
         this.avatar = data[0]['avatar'];
         this.role = data[0]['role'];
@@ -34,10 +36,12 @@ export class HeaderComponent implements OnInit {
         console.log(err.message);
       });
 
+    // GET ALL CATEGORIES
     this.remoteService.getCategories().subscribe((data) => {
         for (let obj in data) {
           arr.push(data[obj]['category']);
         }
+
       },
       err => {
         console.log(err.message);
@@ -46,14 +50,20 @@ export class HeaderComponent implements OnInit {
     this.categoriesArr = arr;
   }
 
-  clickCategory(categ){
-    this.router.navigate([`/category/${categ}`]);
-    window.location.reload();
+  clickCategory(categ) {
+    this.remoteService.listAllPostsFromCategory(categ).subscribe(data => {
+        this.router.navigate([`/category/${categ}`]);
+      },
+      err => {
+        console.log(err.message);
+      });
+    console.log(categ);
+
+
+    // window.location.reload();
   }
 
   private dropdown() {
-    // console.log('in dropdown');
-
     $('.dropdown').click(function (e) {
       e.preventDefault();
       $(this).next('.dropdown-content').slideToggle('fast');
@@ -71,22 +81,10 @@ export class HeaderComponent implements OnInit {
     });
   }
 
-  dropdown2() {
-    $('.dropdown2').click(function (e) {
-      console.log('in 2');
-      e.preventDefault();
-      if ($('.dropdown2').hasClass('up')) {
-        $(this).next('.dropdown-content2').removeClass('up').addClass('down').slideDown('fast');
-      }
-    });
+  dropdown2(e) {
+    e.preventDefault();
+    $('.dropdown2').next('.dropdown-content2').slideToggle('fast');
 
-    $('.dropdown2').click(function (e) {
-      console.log('in 2');
-      e.preventDefault();
-      if ($('.dropdown2').hasClass('down')) {
-        $(this).next('.dropdown-content2').removeClass('down').addClass('up').slideUp('fast');
-      }
-    });
 
   }
 
@@ -95,9 +93,9 @@ export class HeaderComponent implements OnInit {
     return !!localStorage.getItem('authtoken');
   }
 
-  isAdmin(){
-    if(this.role === 'admin'){
-        return true
+  isAdmin() {
+    if (this.role === 'admin') {
+      return true
     }
     return false
   }

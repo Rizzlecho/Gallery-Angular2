@@ -20,9 +20,8 @@ export class DetailsComponent implements OnInit {
   public comment;
   public role;
   public postId;
-  public commentsArr;
-  public textValue;
   public commentFail: boolean;
+  public arr = [];
 
   constructor(private remoteService: RemoteService, private route: ActivatedRoute, private router: Router) {
     this.username = localStorage.getItem('username');
@@ -38,9 +37,10 @@ export class DetailsComponent implements OnInit {
 
     this.remoteService.postDetails(this.postId).subscribe(data => {
         this.article = data;
+
       },
       err => {
-        console.log(err.message);
+        this.router.navigate([`/**`]);
       });
 
     this.remoteService.userDetails().subscribe(data => {
@@ -50,37 +50,20 @@ export class DetailsComponent implements OnInit {
         console.log(err.message);
       });
 
-    this.remoteService.getAllComments(this.postId).subscribe(data => {
-        this.comment = data[0]['comment'];
+    this.getAllComments();
 
-        for (let obj in data) {
-          arr.push(data[obj]);
-        }
-
-      },
-
-      err => {
-        console.log(err.message);
-      });
-
-    this.commentsArr = arr;
 
   }
-
 
   submit() {
     this.model.username = this.username;
     this.model.postId = this.postId;
-    this.model.comment = this.textValue;
-
-    // if (this.textValue !== null) {
-    //   this.commentFail = true;
-    //   return
-    // }
-
 
     this.remoteService.createComment(this.model).subscribe(data => {
+        this.getAllComments();
         this.successfulComment();
+        this.model.comment = '';
+
       },
       err => {
         console.log(err.message);
@@ -89,13 +72,27 @@ export class DetailsComponent implements OnInit {
 
   successfulComment(): void {
     this.router.navigate([`/details/${this.postId}`]);
-    window.location.reload();
   }
 
-  deleteComment(id){
+  getAllComments() {
+
+    this.remoteService.getAllComments(this.postId).subscribe(data => {
+        this.arr = [];
+        this.comment = data[0]['comment'];
+        for (let obj in data) {
+          this.arr.push(data[obj]);
+        }
+      },
+
+      err => {
+        console.log(err.message);
+      });
+  }
+
+  deleteComment(id) {
     this.remoteService.deleteComment(id).subscribe(data => {
         this.router.navigate([`/details/${this.postId}`]);
-        window.location.reload();
+        this.getAllComments();
       },
       err => {
         console.log(err.message);

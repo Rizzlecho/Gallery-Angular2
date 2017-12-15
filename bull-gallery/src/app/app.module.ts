@@ -2,7 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule} from "@angular/common/http";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {NgxPaginationModule} from 'ngx-pagination';
 import {CommonModule} from "@angular/common";
 
@@ -23,6 +23,7 @@ import { EditPostComponent } from './components/edit-post/edit-post.component';
 import {AuthGuard} from "./services/guards/auth.guard";
 import {AdminGuard} from "./services/guards/admin.guard";
 import {RemoteService} from "./services/remote/remote.service";
+import { ErrorComponent } from './components/error/error.component';
 // import { CommentsComponent } from './components/comments/comments.component';
 
 
@@ -40,12 +41,14 @@ import {RemoteService} from "./services/remote/remote.service";
     AdminComponent,
     DetailsComponent,
     EditPostComponent,
+    ErrorComponent,
 
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     NgxPaginationModule,

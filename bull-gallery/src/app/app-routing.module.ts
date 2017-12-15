@@ -13,6 +13,7 @@ import {DetailsComponent} from "./components/details/details.component";
 import {AuthGuard} from "./services/guards/auth.guard";
 import {AdminGuard} from "./services/guards/admin.guard";
 import {EditPostComponent} from "./components/edit-post/edit-post.component";
+import {ErrorComponent} from "./components/error/error.component";
 
 
 
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'profile',canActivate:[AuthGuard],  component: ProfileComponent},
+  {path: '**',  component: ErrorComponent},
 ];
 
 

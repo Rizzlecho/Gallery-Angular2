@@ -11,7 +11,6 @@ import {NgxPaginationModule} from "ngx-pagination/dist/ngx-pagination";
 export class CategoryComponent implements OnInit {
   public title: string;
   articles;
-  viewsArticles;
   image;
   counter = 0;
   loader: boolean = true;
@@ -21,11 +20,28 @@ export class CategoryComponent implements OnInit {
   }
 
   ngOnInit() {
+    let arr = [];
     this.categoryFilter = this.route.snapshot.paramMap.get('id');
+
     //LIST ALL POSTS FROM CATEGORY SECTION
     this.remoteService.listAllPostsFromCategory(this.categoryFilter).subscribe(data => {
         this.articles = data;
         this.loader = false;
+      },
+      err => {
+        console.log(err.message);
+      });
+
+    // CHECK FOR INVALID URL
+    this.remoteService.getCategories().subscribe((data) => {
+        let currentCategory = this.router.url.substr(this.router.url.lastIndexOf('/') + 1, this.router.url.length);
+
+        for (let obj in data) {
+          arr.push(data[obj]['category']);
+        }
+        if (arr.indexOf(currentCategory) == -1) {
+          this.router.navigate([`/**`]);
+        }
       },
       err => {
         console.log(err.message);
