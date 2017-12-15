@@ -4,7 +4,12 @@
       <div class="large-12 columns">SIGN UP</div>
     </div>
 
-    <div *ngIf="registerFail" class="shiny btn-delete" style="margin-top: 20px;">Register Failed!</div>
+    <!--NOTIFICATION-->
+    <div *ngIf="userN" class="shiny btn-delete" style="margin-top: 20px;">Please fill the username field!</div>
+    <div *ngIf="passW" class="shiny btn-delete" style="margin-top: 20px;">Please fill the password field!</div>
+    <div *ngIf="confirmP" class="shiny btn-delete" style="margin-top: 20px;">Passwords do not match!</div>
+
+
     <form class="login-form" (ngSubmit)="submit()" [formGroup]="register">
       <input type="text" placeholder="Username" formControlName="username" name="username"/>
       <span formGroupName="auth">

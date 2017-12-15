@@ -3,6 +3,7 @@ import {Router, RouterModule, RouterLink} from '@angular/router';
 import {RemoteService} from "../../services/remote/remote.service";
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {RegisterModel} from "../../services/models/register.model";
+import {ProfileModel} from "../../services/models/profile.model";
 
 @Component({
   selector: 'bull-profile',
@@ -14,56 +15,41 @@ export class ProfileComponent implements OnInit {
   public avatar: string;
   public editProfile: FormGroup;
   public model;
+  public id: string;
 
   constructor(public remoteService: RemoteService, private router: Router, private fb: FormBuilder,) {
     this.username = localStorage.getItem('username');
-    this.model = new RegisterModel('', '', 'user', 'http://s3.amazonaws.com/37assets/svn/765-default-avatar.png')
+    this.model = new ProfileModel((localStorage.getItem('username')), 'user', '');
   }
 
 
   ngOnInit() {
-    this.remoteService.userDetais().subscribe(data => {
-        console.log(data);
+    this.remoteService.userDetails().subscribe(data => {
+
         this.avatar = data[0]['avatar'];
+        this.id = data[0]['_id']
       },
       err => {
         console.log(err.message);
       });
 
     this.editProfile = this.fb.group({
-      avatar: ['']
+      newAvatar: ['']
     })
   }
 
-  update(e){
-    console.log(e.value.avatar);
+  update(e) {
+    this.model.avatar = e.value.newAvatar;
 
-
-    this.remoteService.editProfile(this.model).subscribe(data =>{
-        console.log(data);
-        this.router.navigate(['/profile']);
+    this.remoteService.editProfile(this.model, this.id).subscribe(data => {
+        window.location.reload();
+        this.router.navigate(['/']);
       },
       err => {
         console.log(err.message);
       })
 
   }
-
-  updated(e){
-    console.log(e.value.avatar);
-
-
-    this.remoteService.editProfile(this.model).subscribe(data =>{
-        console.log(data);
-        this.router.navigate(['/profile']);
-      },
-      err => {
-        console.log(err.message);
-      })
-
-  }
-
-
 
 
 }

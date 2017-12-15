@@ -3,6 +3,7 @@ import * as $ from 'jquery';
 
 import {Router, RouterModule, RouterLink} from '@angular/router';
 import {RemoteService} from "../../../services/remote/remote.service";
+import {CommonModule} from "@angular/common/src/common";
 
 @Component({
   selector: 'bull-header',
@@ -12,7 +13,8 @@ import {RemoteService} from "../../../services/remote/remote.service";
 export class HeaderComponent implements OnInit {
   public username: string;
   public avatar: string;
-  public logged = false;
+  public categoriesArr: any;
+  public role: string;
 
   constructor(public remoteService: RemoteService, private router: Router) {
     this.username = localStorage.getItem('username');
@@ -22,13 +24,31 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.dropdown();
+    let arr = [];
 
-    this.remoteService.userDetais().subscribe(data => {
+    this.remoteService.userDetails().subscribe(data => {
         this.avatar = data[0]['avatar'];
+        this.role = data[0]['role'];
       },
       err => {
         console.log(err.message);
       });
+
+    this.remoteService.getCategories().subscribe((data) => {
+        for (let obj in data) {
+          arr.push(data[obj]['category']);
+        }
+      },
+      err => {
+        console.log(err.message);
+      });
+
+    this.categoriesArr = arr;
+  }
+
+  clickCategory(categ){
+    this.router.navigate([`/category/${categ}`]);
+    window.location.reload();
   }
 
   private dropdown() {
@@ -37,6 +57,11 @@ export class HeaderComponent implements OnInit {
     $('.dropdown').click(function (e) {
       e.preventDefault();
       $(this).next('.dropdown-content').slideToggle('fast');
+    });
+
+    $('.mobile-dropdown').click(function (e) {
+      e.preventDefault();
+      $(this).next('.mobile-dropdown-content').slideToggle('fast');
     });
 
 
@@ -65,18 +90,22 @@ export class HeaderComponent implements OnInit {
 
   }
 
-  func() {
-    console.log(this.logged);
-  }
 
   loggedIn() {
     return !!localStorage.getItem('authtoken');
   }
 
+  isAdmin(){
+    if(this.role === 'admin'){
+        return true
+    }
+    return false
+  }
+
   logout() {
     this.remoteService.logout().subscribe(data => {
       localStorage.clear();
-      this.router.navigate(['/']);
+      this.router.navigate(['/login']);
       // window.location.reload();
     });
 

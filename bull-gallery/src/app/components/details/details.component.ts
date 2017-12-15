@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {RemoteService} from "../../services/remote/remote.service";
 import {ActivatedRoute, Route, Router} from "@angular/router";
 import {Location} from "@angular/common"
+import {CommentModel} from "../../services/models/comment.model";
+import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'bull-details',
@@ -9,36 +11,122 @@ import {Location} from "@angular/common"
   styleUrls: ['./details.component.scss']
 })
 export class DetailsComponent implements OnInit {
-
   public title: string;
-  article;
-  image;
-  counter = 0;
-  username;
-  constructor(private remoteService: RemoteService, private route: ActivatedRoute, private location: Location) {
-    this.username = localStorage.getItem('username')
+  public model: CommentModel;
+  public article;
+  public image;
+  public counter = 0;
+  public username;
+  public comment;
+  public role;
+  public postId;
+  public commentsArr;
+  public textValue;
+  public commentFail: boolean;
+
+  constructor(private remoteService: RemoteService, private route: ActivatedRoute, private router: Router) {
+    this.username = localStorage.getItem('username');
+    this.model = new CommentModel(localStorage.getItem('username'), '', '')
   }
 
 
   ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id');
-    console.log(id);
+    let arr = [];
 
-    this.remoteService.postDetails(id).subscribe(data => {
-        // console.log(data);
+    this.postId = this.route.snapshot.paramMap.get('id');
+
+
+    this.remoteService.postDetails(this.postId).subscribe(data => {
         this.article = data;
-        console.log(this.article.creator);
-
       },
       err => {
         console.log(err.message);
       });
 
+    this.remoteService.userDetails().subscribe(data => {
+        this.role = data[0]['role'];
+      },
+      err => {
+        console.log(err.message);
+      });
+
+    this.remoteService.getAllComments(this.postId).subscribe(data => {
+        this.comment = data[0]['comment'];
+
+        for (let obj in data) {
+          arr.push(data[obj]);
+        }
+
+      },
+
+      err => {
+        console.log(err.message);
+      });
+
+    this.commentsArr = arr;
+
   }
 
-  countClicks(e){
+
+  submit() {
+    this.model.username = this.username;
+    this.model.postId = this.postId;
+    this.model.comment = this.textValue;
+
+    // if (this.textValue !== null) {
+    //   this.commentFail = true;
+    //   return
+    // }
+
+
+    this.remoteService.createComment(this.model).subscribe(data => {
+        this.successfulComment();
+      },
+      err => {
+        console.log(err.message);
+      })
+  }
+
+  successfulComment(): void {
+    this.router.navigate([`/details/${this.postId}`]);
+    window.location.reload();
+  }
+
+  deleteComment(id){
+    this.remoteService.deleteComment(id).subscribe(data => {
+        this.router.navigate([`/details/${this.postId}`]);
+        window.location.reload();
+      },
+      err => {
+        console.log(err.message);
+      });
+  }
+
+  deletePost() {
+    const id = this.route.snapshot.paramMap.get('id');
+
+    this.remoteService.deletePost(id).subscribe(data => {
+        this.article = data;
+        this.router.navigate(['/'])
+      },
+      err => {
+        console.log(err.message);
+      });
+  }
+
+  editPostNavigate() {
+    this.router.navigate(['/edit/' + this.route.snapshot.paramMap.get('id')])
+  }
+
+  isAdmin() {
+    if (this.role === 'admin') {
+      return true
+    }
+    return false
+  }
+
+  countClicks(e) {
     this.counter++;
-    console.log('Counter = ' + this.counter);
   }
 
 

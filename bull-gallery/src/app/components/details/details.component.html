@@ -2,41 +2,56 @@
   <div class="detailed">
     <div class="wp-content">
       <h1>{{article?.title}}</h1>
-      <img [src]="article?.image" alt="nature">
-      <p>{{calcTime(article?._kmd['lmt'])}} <span>{{article?.creator}}</span></p>
+      <img [src]="article?.image" alt="Loading...">
 
-      <div class="description">
-        <p>{{article?.description}}</p>
+      <div class="responsive-details">
+        <p class="details-p-left">{{calcTime(article?._kmd['lmt'])}} ago by <span>{{article?.creator}}</span> in {{article?.category}}</p>
+        <p class="details-p-right">{{article?.counter}} views</p>
+
+        <h3>Description</h3>
+        <div class="description">
+          <p>{{article?.description}}</p>
+        </div>
+      </div>
+
+    </div>
+    <br>
+
+    <div class="responsive-details">
+      <div class="properties">
+        <!--<h2>Properties</h2>-->
+
+        <button class="btn btn--default shiny btn-download"><a href="{{article?.image}}" download>Download</a></button>
+        <span *ngIf="article?.creator == username || isAdmin()">
+          <button (click)="editPostNavigate()" class="btn btn--default shiny btn-edit">Edit</button>
+          <button (click)="deletePost()" class="btn btn--default shiny btn-delete">Delete</button>
+        </span>
+      </div>
+      <hr>
+
+      <!--COMMENT SECTION-->
+      <div class="comments-section">
+        <h2>Comments</h2>
+
+        <p *ngIf="commentFail">Enter comment</p>
+        <div class="submit">
+          <textarea (input)="textValue = $event.target.value"  class="text-area" name="commentArea" cols="50" rows="5"></textarea>
+          <button (click)="submit()" type="submit" class="btn btn--default shiny btn-edit">Submit</button>
+        </div>
+
+        <span *ngIf="commentsArr.length !== 0">
+          <div *ngFor="let comment of commentsArr" class="comment">
+            <span *ngIf="comment.username === username || isAdmin()"><span class="hiks" (click)="deleteComment(comment._id)">x</span></span>
+            <p class="uploaded-by">{{calcTime(comment._kmd.lmt)}} by {{comment.username}}</p>
+            <p>{{comment.comment}}</p>
+          </div>
+        </span>
+        <p *ngIf="commentsArr.length === 0">No comments yet.</p>
+
+
       </div>
 
     </div>
 
-    <div class="properties">
-      <h2>Properties</h2>
-
-      <button class="btn btn--default shiny btn-download"><a href="#">Download</a></button>
-      <!--TODO To Add Download in a -->
-      <span *ngIf="article?.creator == username">
-        <button class="btn btn--default shiny btn-edit">Edit</button>
-        <button class="btn btn--default shiny btn-delete">Delete</button>
-      </span>
-    </div>
-    <hr>
-    <div class="comments-section">
-      <h2>Comments</h2>
-
-      <div class="submit">
-        <textarea class="text-area" name="commentArea" cols="50" rows="5"></textarea>
-        <button type="submit" class="btn btn--default shiny btn-edit">Submit</button>
-      </div>
-
-      <div class="comment">
-        <p class="uploaded-by">16:04, Nov 08, 2017 by Rizzle</p>
-        <p>Hello iam very pleased to watch this picture.Hello iam very pleased to watch this picture.Hello iam very
-          pleased to watch this picture.Hello iam very pleased to watch this picture.Hello iam very pleased to watch
-          this picture.</p>
-      </div>
-
-    </div>
   </div>
 </main>

@@ -6,6 +6,5 @@ export class UploadModel {
     public description: string,
     public creator: string,
     public counter: number,
-    public comments: [{}]
   ) { }
 }

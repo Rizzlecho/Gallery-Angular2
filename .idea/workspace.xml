@@ -4,20 +4,29 @@
     <list default="true" id="e53abee0-2ea2-4174-94cb-5a33ed6b492e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bull-gallery/src/app/app-routing.module.ts" afterPath="$PROJECT_DIR$/bull-gallery/src/app/app-routing.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bull-gallery/src/app/app.component.html" afterPath="$PROJECT_DIR$/bull-gallery/src/app/app.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bull-gallery/src/app/app.module.ts" afterPath="$PROJECT_DIR$/bull-gallery/src/app/app.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bull-gallery/src/app/components/admin/admin.component.html" afterPath="$PROJECT_DIR$/bull-gallery/src/app/components/admin/admin.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bull-gallery/src/app/components/admin/admin.component.ts" afterPath="$PROJECT_DIR$/bull-gallery/src/app/components/admin/admin.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bull-gallery/src/app/components/auth/login/login.component.ts" afterPath="$PROJECT_DIR$/bull-gallery/src/app/components/auth/login/login.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bull-gallery/src/app/components/auth/register/register.component.html" afterPath="$PROJECT_DIR$/bull-gallery/src/app/components/auth/register/register.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bull-gallery/src/app/components/auth/register/register.component.ts" afterPath="$PROJECT_DIR$/bull-gallery/src/app/components/auth/register/register.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bull-gallery/src/app/components/category/category.component.html" afterPath="$PROJECT_DIR$/bull-gallery/src/app/components/category/category.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bull-gallery/src/app/components/category/category.component.ts" afterPath="$PROJECT_DIR$/bull-gallery/src/app/components/category/category.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bull-gallery/src/app/components/common/header/header.component.html" afterPath="$PROJECT_DIR$/bull-gallery/src/app/components/common/header/header.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bull-gallery/src/app/components/common/header/header.component.ts" afterPath="$PROJECT_DIR$/bull-gallery/src/app/components/common/header/header.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bull-gallery/src/app/components/details/details.component.html" afterPath="$PROJECT_DIR$/bull-gallery/src/app/components/details/details.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bull-gallery/src/app/components/details/details.component.ts" afterPath="$PROJECT_DIR$/bull-gallery/src/app/components/details/details.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bull-gallery/src/app/components/home/home.component.html" afterPath="$PROJECT_DIR$/bull-gallery/src/app/components/home/home.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bull-gallery/src/app/components/home/home.component.ts" afterPath="$PROJECT_DIR$/bull-gallery/src/app/components/home/home.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bull-gallery/src/app/components/profile/profile.component.html" afterPath="$PROJECT_DIR$/bull-gallery/src/app/components/profile/profile.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bull-gallery/src/app/components/profile/profile.component.ts" afterPath="$PROJECT_DIR$/bull-gallery/src/app/components/profile/profile.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bull-gallery/src/app/components/upload/upload.component.html" afterPath="$PROJECT_DIR$/bull-gallery/src/app/components/upload/upload.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bull-gallery/src/app/components/upload/upload.component.ts" afterPath="$PROJECT_DIR$/bull-gallery/src/app/components/upload/upload.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bull-gallery/src/app/services/guards/auth.guard.ts" afterPath="$PROJECT_DIR$/bull-gallery/src/app/services/guards/auth.guard.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bull-gallery/src/app/services/models/upload.model.ts" afterPath="$PROJECT_DIR$/bull-gallery/src/app/services/models/upload.model.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bull-gallery/src/app/services/remote/remote.service.ts" afterPath="$PROJECT_DIR$/bull-gallery/src/app/services/remote/remote.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bull-gallery/src/assets/style.css" afterPath="$PROJECT_DIR$/bull-gallery/src/assets/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bull-gallery/src/assets/style.css.map" afterPath="$PROJECT_DIR$/bull-gallery/src/assets/style.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bull-gallery/src/assets/style.scss" afterPath="$PROJECT_DIR$/bull-gallery/src/assets/style.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,56 +39,30 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="register.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/auth/register/register.component.ts">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="details.component.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/details/details.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile.component.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/profile/profile.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="51" column="13" lean-forward="true" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/profile/profile.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="remote.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/services/remote/remote.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2505">
-              <caret line="124" column="10" lean-forward="false" selection-start-line="124" selection-start-column="10" selection-end-line="124" selection-end-column="10" />
+            <state relative-caret-position="95">
+              <caret line="39" column="28" lean-forward="true" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
-                <element signature="e#159#214#0" expanded="true" />
-                <element signature="n#!!block;n#logout#0;n#RemoteService#0" expanded="false" />
+                <element signature="e#0#48#0" expanded="true" />
+                <element signature="e#1324#1370#0" expanded="false" />
+                <element signature="n#!!block;n#deleteComment#0;n#DetailsComponent#0" expanded="false" />
+                <element signature="n#!!block;n#deletePost#0;n#DetailsComponent#0" expanded="false" />
+                <element signature="n#!!block;n#editPostNavigate#0;n#DetailsComponent#0" expanded="false" />
+                <element signature="n#!!block;n#isAdmin#0;n#DetailsComponent#0" expanded="false" />
+                <element signature="n#!!block;n#calcTime#0;n#DetailsComponent#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="upload.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/upload/upload.component.html">
+      <file leaf-file-name="details.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/details/details.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="12" column="72" lean-forward="false" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="72" />
+            <state relative-caret-position="425">
+              <caret line="43" column="67" lean-forward="false" selection-start-line="43" selection-start-column="67" selection-end-line="43" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -88,13 +71,44 @@
       <file leaf-file-name="upload.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/upload/upload.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1149">
-              <caret line="94" column="8" lean-forward="true" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
+            <state relative-caret-position="547">
+              <caret line="67" column="34" lean-forward="true" selection-start-line="67" selection-start-column="34" selection-end-line="67" selection-end-column="34" />
               <folding>
-                <element signature="e#1483#1532#0" expanded="false" />
-                <element signature="e#1569#1648#0" expanded="false" />
-                <element signature="e#1738#1820#0" expanded="false" />
-                <element signature="e#1863#1951#0" expanded="false" />
+                <element signature="e#2064#2146#0" expanded="false" />
+                <element signature="e#2191#2279#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bull-gallery/src/assets/style.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="471">
+              <caret line="950" column="15" lean-forward="false" selection-start-line="950" selection-start-column="15" selection-end-line="950" selection-end-column="15" />
+              <folding>
+                <element signature="e#15931#17319#0" expanded="false" />
+                <element signature="e#17340#17414#0" expanded="false" />
+                <element signature="e#17425#17985#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit-post.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/edit-post/edit-post.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-641">
+              <caret line="32" column="14" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+              <folding>
+                <element signature="e#1746#1840#0" expanded="false" />
+                <element signature="n#!!block;n#onChange#0;n#EditPostComponent#0" expanded="false" />
+                <element signature="e#2293#2342#0" expanded="false" />
+                <element signature="e#2381#2460#0" expanded="false" />
+                <element signature="e#2553#2635#0" expanded="false" />
+                <element signature="e#2680#2768#0" expanded="false" />
+                <element signature="e#2862#2953#0" expanded="false" />
+                <element signature="e#2986#3036#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -106,6 +120,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -121,9 +136,26 @@
       <find>bull-logo</find>
       <find>isLoggedIn</find>
       <find>formControl</find>
+      <find>console.log</find>
+      <find>dropdow</find>
+      <find>world</find>
+      <find>description</find>
+      <find>medi</find>
+      <find>delete</find>
+      <find>counter</find>
+      <find>responsive</find>
+      <find>proper</find>
+      <find>nth-of</find>
+      <find>tile</find>
+      <find>home</find>
+      <find>propert</find>
+      <find>ngx</find>
+      <find>console</find>
+      <find>comment</find>
     </findStrings>
     <replaceStrings>
       <replace>Login</replace>
+      <replace>category</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -132,13 +164,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scripts/script.js" />
-        <option value="$PROJECT_DIR$/login-register.html" />
-        <option value="$PROJECT_DIR$/styles/responsive.scss" />
-        <option value="$PROJECT_DIR$/admin.html" />
-        <option value="$PROJECT_DIR$/details.html" />
-        <option value="$PROJECT_DIR$/login.html" />
-        <option value="$PROJECT_DIR$/profile.html" />
         <option value="$PROJECT_DIR$/register.html" />
         <option value="$PROJECT_DIR$/upload.html" />
         <option value="$PROJECT_DIR$/nature.html" />
@@ -150,32 +175,46 @@
         <option value="$PROJECT_DIR$/bull-gallery/src/app/app.component.ts" />
         <option value="$PROJECT_DIR$/bull-gallery/src/app/services/models/login.model.ts" />
         <option value="$PROJECT_DIR$/bull-gallery/src/app/components/auth/login/login.component.html" />
-        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/auth/register/register.component.html" />
-        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/auth/register/register.component.ts" />
-        <option value="$PROJECT_DIR$/bull-gallery/src/app/services/models/register.model.ts" />
         <option value="$PROJECT_DIR$/bull-gallery/src/app/components/common/footer/footer.component.html" />
         <option value="$PROJECT_DIR$/bull-gallery/src/app/components/partials/article/article.component.html" />
         <option value="$PROJECT_DIR$/views/index.html" />
         <option value="$PROJECT_DIR$/bull-gallery/src/assets/style.css" />
-        <option value="$PROJECT_DIR$/bull-gallery/src/assets/style.scss" />
         <option value="$PROJECT_DIR$/bull-gallery/src/index.html" />
-        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/upload/upload.component.html" />
-        <option value="$PROJECT_DIR$/bull-gallery/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/bull-gallery/src/app/app.component.html" />
-        <option value="$PROJECT_DIR$/bull-gallery/src/app/services/models/upload.model.ts" />
-        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/upload/upload.component.ts" />
-        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/details/details.component.ts" />
-        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/details/details.component.html" />
-        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/home/home.component.ts" />
-        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/home/home.component.html" />
-        <option value="$PROJECT_DIR$/bull-gallery/src/app/app-routing.module.ts" />
         <option value="$PROJECT_DIR$/bull-gallery/src/app/services/guards/auth.guard.ts" />
-        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/common/header/header.component.html" />
-        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/common/header/header.component.ts" />
-        <option value="$PROJECT_DIR$/bull-gallery/src/app/services/remote/remote.service.ts" />
-        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/auth/login/login.component.ts" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/services/models/profile.model.ts" />
         <option value="$PROJECT_DIR$/bull-gallery/src/app/components/profile/profile.component.html" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/services/models/register.model.ts" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/services/models/category.model.ts" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/services/guards/admin.guard.ts" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/admin/admin.component.html" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/upload/upload.component.html" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/common/header/header.component.ts" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/category/category.component.html" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/app-routing.module.ts" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/services/models/upload.model.ts" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/edit-post/edit-post.component.html" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/edit-post/edit-post.component.ts" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/upload/upload.component.ts" />
         <option value="$PROJECT_DIR$/bull-gallery/src/app/components/profile/profile.component.ts" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/category/category.component.ts" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/auth/login/login.component.ts" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/admin/admin.component.ts" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/home/home.component.html" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/common/header/header.component.html" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/details/kinvey.json" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/home/home.component.ts" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/services/models/comment.model.ts" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/comments/comments.component.ts" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/comments/comments.component.html" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/auth/register/validatePassword.ts" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/auth/register/register.component.html" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/auth/register/register.component.ts" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/services/remote/remote.service.ts" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/details/details.component.html" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/assets/style.scss" />
+        <option value="$PROJECT_DIR$/bull-gallery/src/app/components/details/details.component.ts" />
       </list>
     </option>
   </component>
@@ -209,6 +248,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -258,8 +298,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="register" type="462c0819:PsiDirectoryNode" />
+              <item name="details" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Gallery-Angular2" type="b2602c69:ProjectViewProjectNode" />
@@ -268,7 +307,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="edit-post" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Gallery-Angular2" type="b2602c69:ProjectViewProjectNode" />
@@ -277,17 +316,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="header" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Gallery-Angular2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Gallery-Angular2" type="462c0819:PsiDirectoryNode" />
-              <item name="bull-gallery" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="profile" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Gallery-Angular2" type="b2602c69:ProjectViewProjectNode" />
@@ -313,15 +342,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
-              <item name="guards" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Gallery-Angular2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Gallery-Angular2" type="462c0819:PsiDirectoryNode" />
-              <item name="bull-gallery" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
               <item name="remote" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -331,24 +351,10 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Gallery-Angular2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Gallery-Angular2" type="462c0819:PsiDirectoryNode" />
-              <item name="bull-gallery" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Gallery-Angular2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Gallery-Angular2" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -400,11 +406,13 @@
       <workItem from="1513081741878" duration="66000" />
       <workItem from="1513081819337" duration="48401000" />
       <workItem from="1513161156737" duration="28493000" />
+      <workItem from="1513249633582" duration="8959000" />
+      <workItem from="1513258643920" duration="36458000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108676000" />
+    <option name="totallyTimeSpent" value="154093000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -437,143 +445,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bull-gallery/karma.conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bull-gallery/src/assets/style.css.map">
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bull-gallery/.angular-cli.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ngx-dropdown-master/ngx-dropdown-master/package.json" />
-    <entry file="file://$PROJECT_DIR$/views/scripts/script.js" />
-    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/common/header/header.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bull-gallery/node_modules/@angular/router/esm2015/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="5560" column="14" lean-forward="true" selection-start-line="5560" selection-start-column="14" selection-end-line="5560" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="63" column="33" lean-forward="true" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/services/models/login.model.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/auth/register/register.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/auth/register/register.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bull-gallery/node_modules/@angular/router/src/config.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="331" column="17" lean-forward="false" selection-start-line="331" selection-start-column="17" selection-end-line="331" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/common/footer/footer.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/services/models/register.model.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/auth/register/register.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="103" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="103" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/partials/article/article.component.ts" />
-    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/partials/article/article.component.html" />
-    <entry file="file://$PROJECT_DIR$/views/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="67" column="97" lean-forward="false" selection-start-line="67" selection-start-column="97" selection-end-line="67" selection-end-column="97" />
-          <folding>
-            <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bull-gallery/node_modules/ngx-pagination/dist/ngx-pagination.umd.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="268" column="32" lean-forward="false" selection-start-line="268" selection-start-column="32" selection-end-line="268" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bull-gallery/src/assets/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="638">
           <caret line="412" column="10" lean-forward="false" selection-start-line="412" selection-start-column="10" selection-end-line="412" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -588,7 +468,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -596,7 +475,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
           <caret line="82" column="27" lean-forward="true" selection-start-line="82" selection-start-column="27" selection-end-line="82" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -604,7 +482,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
           <caret line="85" column="6" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="85" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -612,9 +489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-          <folding>
-            <element signature="n#div#0;n#bull-root#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -622,7 +496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="8" lean-forward="true" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -631,16 +504,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#56#0" expanded="true" />
+            <element signature="e#0#56#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/services/models/upload.model.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -648,26 +513,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1071">
           <caret line="104" column="55" lean-forward="false" selection-start-line="104" selection-start-column="55" selection-end-line="104" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/details/details.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" column="47" lean-forward="false" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/details/details.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="31" column="8" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#48#0" expanded="false" />
-            <element signature="n#!!block;n#calcTime#0;n#DetailsComponent#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -675,18 +520,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/home/home.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#48#0" expanded="false" />
-            <element signature="n#!!block;n#calcTime#0;n#HomeComponent#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -695,66 +528,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bull-gallery/src/assets/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="824" column="10" lean-forward="true" selection-start-line="824" selection-start-column="10" selection-end-line="824" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/home/home.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/services/guards/auth.guard.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="29">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/app-routing.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/common/header/header.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="21" column="74" lean-forward="false" selection-start-line="21" selection-start-column="74" selection-end-line="21" selection-end-column="74" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#li#0;n#ul#0;n#nav#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#li#2;n#ul#0;n#nav#0;n#!!top" expanded="false" />
-            <element signature="n#li#2;n#ul#1;n#nav#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#li#2;n#ul#1;n#nav#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -762,80 +539,386 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="81" lean-forward="false" selection-start-line="8" selection-start-column="81" selection-end-line="8" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/services/models/category.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/auth/login/login.component.ts">
+    <entry file="file://$PROJECT_DIR$/views/admin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1029">
-          <caret line="47" column="33" lean-forward="false" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
+        <state relative-caret-position="272">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="76" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/services/models/profile.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/common/header/header.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-21">
-          <caret line="36" column="39" lean-forward="true" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/auth/register/register.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/services/remote/remote.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2505">
-          <caret line="124" column="10" lean-forward="false" selection-start-line="124" selection-start-column="10" selection-end-line="124" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#159#214#0" expanded="true" />
-            <element signature="n#!!block;n#logout#0;n#RemoteService#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/upload/upload.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="72" lean-forward="false" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/upload/upload.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1149">
-          <caret line="94" column="8" lean-forward="true" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
-          <folding>
-            <element signature="e#1483#1532#0" expanded="false" />
-            <element signature="e#1569#1648#0" expanded="false" />
-            <element signature="e#1738#1820#0" expanded="false" />
-            <element signature="e#1863#1951#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/profile/profile.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+        <state relative-caret-position="325">
+          <caret line="13" column="42" lean-forward="false" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/services/guards/admin.guard.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/admin/admin.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="23" column="15" lean-forward="true" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/services/guards/auth.guard.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/category/category.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="34" column="33" lean-forward="false" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+          <folding>
+            <element signature="n#ul#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/app-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="22" column="73" lean-forward="false" selection-start-line="22" selection-start-column="73" selection-end-line="22" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/services/models/upload.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/edit-post/edit-post.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/admin/admin.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="37" column="15" lean-forward="false" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/profile/profile.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="51" column="13" lean-forward="true" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
+        <state relative-caret-position="520">
+          <caret line="43" column="75" lean-forward="false" selection-start-line="43" selection-start-column="75" selection-end-line="43" selection-end-column="75" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/common/header/header.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="83" column="13" lean-forward="false" selection-start-line="83" selection-start-column="6" selection-end-line="83" selection-end-column="13" />
+          <folding>
+            <element signature="e#802#889#0" expanded="false" />
+            <element signature="e#1010#1104#0" expanded="false" />
+            <element signature="n#!!block;n#dropdown#0;n#HeaderComponent#0" expanded="false" />
+            <element signature="n#!!block;n#loggedIn#0;n#HeaderComponent#0" expanded="false" />
+            <element signature="n#!!block;n#isAdmin#0;n#HeaderComponent#0" expanded="false" />
+            <element signature="n#!!block;n#logout#0;n#HeaderComponent#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/category/category.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="30" column="15" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#48#0" expanded="false" />
+            <element signature="n#!!block;n#calcTime#0;n#CategoryComponent#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/home/home.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="117" lean-forward="false" selection-start-line="19" selection-start-column="117" selection-end-line="19" selection-end-column="117" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/common/header/header.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="582">
+          <caret line="40" column="48" lean-forward="false" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+          <folding>
+            <element signature="n#li#4;n#ul#0;n#nav#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/details/kinvey.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="131" column="13" lean-forward="true" selection-start-line="131" selection-start-column="13" selection-end-line="131" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/details/details.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#56#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/upload/upload.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="8" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/home/home.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="685">
+          <caret line="58" column="2" lean-forward="true" selection-start-line="58" selection-start-column="2" selection-end-line="77" selection-end-column="3" />
+          <folding>
+            <element signature="n#!!block;n#calcTime#0;n#HomeComponent#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/comments/comments.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/comments/comments.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/services/models/comment.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/services/models/login.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/auth/register/register.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="34" column="8" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#48#0" expanded="false" />
+            <element signature="e#1597#1642#0" expanded="false" />
+            <element signature="e#1682#1753#0" expanded="false" />
+            <element signature="e#1851#1925#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/auth/register/register.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="100" lean-forward="false" selection-start-line="9" selection-start-column="100" selection-end-line="9" selection-end-column="100" />
+          <folding>
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/auth/register/validatePassword.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/services/remote/remote.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="37" column="32" lean-forward="false" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+          <folding>
+            <element signature="n#!!block;n#login#0;n#RemoteService#0" expanded="false" />
+            <element signature="n#!!block;n#register#0;n#RemoteService#0" expanded="false" />
+            <element signature="n#!!block;n#logout#0;n#RemoteService#0" expanded="false" />
+            <element signature="n#!!block;n#loggedIn#0;n#RemoteService#0" expanded="false" />
+            <element signature="n#!!block;n#upload#0;n#RemoteService#0" expanded="false" />
+            <element signature="n#!!block;n#listAllPosts#0;n#RemoteService#0" expanded="false" />
+            <element signature="n#!!block;n#listAllPostsFromCategory#0;n#RemoteService#0" expanded="false" />
+            <element signature="n#!!block;n#listMostViewed#0;n#RemoteService#0" expanded="false" />
+            <element signature="n#!!block;n#postDetails#0;n#RemoteService#0" expanded="false" />
+            <element signature="n#!!block;n#deletePost#0;n#RemoteService#0" expanded="false" />
+            <element signature="n#!!block;n#editPost#0;n#RemoteService#0" expanded="false" />
+            <element signature="n#!!block;n#createComment#0;n#RemoteService#0" expanded="false" />
+            <element signature="n#!!block;n#getAllComments#0;n#RemoteService#0" expanded="false" />
+            <element signature="n#!!block;n#deleteComment#0;n#RemoteService#0" expanded="false" />
+            <element signature="n#!!block;n#userDetails#0;n#RemoteService#0" expanded="false" />
+            <element signature="n#!!block;n#editProfile#0;n#RemoteService#0" expanded="false" />
+            <element signature="n#!!block;n#getCategories#0;n#RemoteService#0" expanded="false" />
+            <element signature="n#!!block;n#createCategory#0;n#RemoteService#0" expanded="false" />
+            <element signature="n#!!block;n#deleteCategory#0;n#RemoteService#0" expanded="false" />
+            <element signature="n#!!block;n#createAuthHeaders#0;n#RemoteService#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/services/models/register.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/auth/login/login.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/upload/upload.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="67" column="34" lean-forward="true" selection-start-line="67" selection-start-column="34" selection-end-line="67" selection-end-column="34" />
+          <folding>
+            <element signature="e#2064#2146#0" expanded="false" />
+            <element signature="e#2191#2279#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/details/details.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="43" column="67" lean-forward="false" selection-start-line="43" selection-start-column="67" selection-end-line="43" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/assets/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="950" column="15" lean-forward="false" selection-start-line="950" selection-start-column="15" selection-end-line="950" selection-end-column="15" />
+          <folding>
+            <element signature="e#15931#17319#0" expanded="false" />
+            <element signature="e#17340#17414#0" expanded="false" />
+            <element signature="e#17425#17985#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/edit-post/edit-post.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-641">
+          <caret line="32" column="14" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+          <folding>
+            <element signature="e#1746#1840#0" expanded="false" />
+            <element signature="n#!!block;n#onChange#0;n#EditPostComponent#0" expanded="false" />
+            <element signature="e#2293#2342#0" expanded="false" />
+            <element signature="e#2381#2460#0" expanded="false" />
+            <element signature="e#2553#2635#0" expanded="false" />
+            <element signature="e#2680#2768#0" expanded="false" />
+            <element signature="e#2862#2953#0" expanded="false" />
+            <element signature="e#2986#3036#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bull-gallery/src/app/components/details/details.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="39" column="28" lean-forward="true" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+            <element signature="e#1324#1370#0" expanded="false" />
+            <element signature="n#!!block;n#deleteComment#0;n#DetailsComponent#0" expanded="false" />
+            <element signature="n#!!block;n#deletePost#0;n#DetailsComponent#0" expanded="false" />
+            <element signature="n#!!block;n#editPostNavigate#0;n#DetailsComponent#0" expanded="false" />
+            <element signature="n#!!block;n#isAdmin#0;n#DetailsComponent#0" expanded="false" />
+            <element signature="n#!!block;n#calcTime#0;n#DetailsComponent#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

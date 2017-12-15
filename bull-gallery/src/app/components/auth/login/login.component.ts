@@ -33,7 +33,6 @@ export class LoginComponent implements OnInit {
     this.remoteService.login(this.model)
       .subscribe(
         data => {
-          console.log(data);
 
            this.successfulLogin(data);
         },
@@ -50,7 +49,7 @@ export class LoginComponent implements OnInit {
     localStorage.setItem('username', data['username']);
     this.loginFail = false;
     this.router.navigate(['/']);
-    // window.location.reload();
+    window.location.reload();
   }
 
 }

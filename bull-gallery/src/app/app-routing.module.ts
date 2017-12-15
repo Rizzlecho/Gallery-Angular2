@@ -11,15 +11,18 @@ import {AdminComponent} from "./components/admin/admin.component";
 import {DetailsComponent} from "./components/details/details.component";
 
 import {AuthGuard} from "./services/guards/auth.guard";
+import {AdminGuard} from "./services/guards/admin.guard";
+import {EditPostComponent} from "./components/edit-post/edit-post.component";
 
 
 
 const routes: Routes = [
-  {path: '', pathMatch: 'full', component:HomeComponent},
-  {path: 'category', component: CategoryComponent},
-  {path: 'details/:id', component: DetailsComponent},
+  {path: '', pathMatch: 'full',canActivate:[AuthGuard] , component:HomeComponent},
+  {path: 'category/:id',canActivate:[AuthGuard], component: CategoryComponent},
+  {path: 'details/:id',canActivate:[AuthGuard], component: DetailsComponent},
+  {path: 'edit/:id',canActivate:[AuthGuard], component: EditPostComponent},
   {path: 'upload', canActivate:[AuthGuard], component: UploadComponent},
-  {path: 'admin', canActivate:[AuthGuard], component: AdminComponent},
+  {path: 'admin', canActivate:[AuthGuard, AdminGuard], component: AdminComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'profile',canActivate:[AuthGuard],  component: ProfileComponent},

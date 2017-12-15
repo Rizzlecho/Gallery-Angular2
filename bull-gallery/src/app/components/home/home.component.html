@@ -19,9 +19,6 @@
     <a *ngFor="let article of articles  | paginate: { itemsPerPage: 6, currentPage: p }" class="tile"
        [style.background-image]="'url(' + article?.image + ')'" (click)="countClicks($event); details(article?._id)">
 
-      <!--<img class="tile-img" *ngIf="article.image" src="{{article.image}}">-->
-      <!--<img class="tile-img" *ngIf="!article.image.endsWith('.png') || !article.image.endsWith('.jpg')" src="../../../assets/images/bull-logo.png">-->
-
       <div class="tile--content-wrap">
         <div class="tile--content"><p class="tile--date">{{calcTime(article._kmd['lmt'])}} ago</p>
           <h2 class="">{{article?.title}}</h2>
@@ -47,15 +44,14 @@
   </div>
 
   <div class="tile-group-inner">
-    <a *ngFor="let article of viewsArticles  | paginate: { itemsPerPage: 6, currentPage: p }" class="tile"
-       [style.background-image]="'url(' + article?.image + ')'">
+    <a *ngFor="let article of viewsArticles" class="tile"
+       [style.background-image]="'url(' + article?.image + ')'" (click)="countClicks($event); details(article?._id)">
 
-      <!--<img class="tile-img" *ngIf="article.image" src="{{article.image}}">-->
-      <!--<img class="tile-img" *ngIf="!article.image.endsWith('.png') || !article.image.endsWith('.jpg')" src="../../../assets/images/bull-logo.png">-->
 
       <div class="tile--content-wrap">
         <div class="tile--content">
-          <p class="tile--date">20 views</p>
+          <p *ngIf="article.counter > 0" class="tile--date">{{article.counter}} views</p>
+          <p *ngIf="article.counter === 0" class="tile--date">No views yet</p>
           <p class="tile--date">{{calcTime(article._kmd['lmt'])}} ago</p>
           <h2 class="">{{article.title}}</h2>
         </div>
@@ -66,7 +62,5 @@
     </a>
   </div>
 
-  <div class="pagination">
-    <!--<pagination-controls (pageChange)="p = $event"></pagination-controls>-->
-  </div>
+  <div class="pagination"></div>
 </div>

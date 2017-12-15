@@ -1,9 +1,11 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {AbstractControl, FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Form} from '@angular/forms/src/directives/form_interface'
 import {RemoteService} from '../../../services/remote/remote.service'
 import {RegisterModel} from "../../../services/models/register.model";
 import {Router} from "@angular/router";
+import {PasswordValidation} from './validatePassword'
+
 
 @Component({
   selector: 'bull-register',
@@ -14,6 +16,9 @@ export class RegisterComponent implements OnInit {
   register: FormGroup;
   model: RegisterModel;
   registerFail: boolean;
+  userN;
+  passW;
+  confirmP;
 
   constructor(private router: Router, private fb: FormBuilder, private remoteService: RemoteService) {
     this.model = new RegisterModel('', '', 'user', 'http://s3.amazonaws.com/37assets/svn/765-default-avatar.png')
@@ -25,23 +30,46 @@ export class RegisterComponent implements OnInit {
       auth: this.fb.group({
         password: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(25)]],
         confirmPassword: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(25)]],
+      }, {
+        validator: PasswordValidation.MatchPassword
       })
     })
   }
 
   submit() {
-
     this.model.username = this.register.value['username'];
     this.model.password = this.register.value.auth['password'];
 
-    this.remoteService.register(this.model).subscribe(data =>{
-          console.log(data);
-           this.router.navigate(['/login']);
-          },
-          err => {
-            console.log(err.message);
-            this.registerFail = true;
-          })
+    //NOTIFICATIONS
+    if(this.model.username === ''){
+      this.userN = true;
+      return
+    }
+    else if(this.model.password === ''){
+      this.userN = false;
+      this.passW = true;
+      return
+    }
+    else if(this.register.value.auth['password'] !== this.register.value.auth['confirmPassword']){
+      this.passW = false;
+      this.confirmP = true;
+      return
     }
 
+    this.remoteService.register(this.model).subscribe(data => {
+        this.successfulRegister();
+        this.router.navigate(['/login']);
+      },
+      err => {
+        console.log(err.message);
+        this.registerFail = true;
+      })
   }
+
+
+
+  successfulRegister(): void {
+    this.registerFail = false;
+    this.router.navigate(['/']);
+  }
+}

@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    //LIST ALL POSTS SECTION
     this.remoteService.listAllPosts().subscribe(data => {
         this.articles = data;
         this.loader = false;
@@ -28,8 +29,9 @@ export class HomeComponent implements OnInit {
       err => {
         console.log(err.message);
       });
-    // console.log('Counter = ' + this.counter);
 
+
+    // MOST VIEWED SECTION
     this.remoteService.listMostViewed().subscribe(data => {
         this.viewsArticles = data;
       },
@@ -41,7 +43,6 @@ export class HomeComponent implements OnInit {
   details(e) {
     this.remoteService.postDetails(e).subscribe(data => {
         this.articles = data;
-        console.log('details func');
         this.router.navigate([`/details/${e}`]);
       },
       err => {
@@ -52,13 +53,12 @@ export class HomeComponent implements OnInit {
 
   countClicks(e) {
     this.counter++;
-    console.log('Counter = ' + this.counter);
   }
 
 
   calcTime(dateIsoFormat) {
 
-    let diff = +new Date - (+new Date(dateIsoFormat));
+    let diff = +new Date() - (+new Date(dateIsoFormat));
     diff = Math.floor(diff / 60000);
     if (diff < 1) return 'less than a minute';
     if (diff < 60) return diff + ' minute' + pluralize(diff);

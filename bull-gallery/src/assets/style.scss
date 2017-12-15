@@ -51,9 +51,13 @@ blockquote {
   font-weight: 400;
 }
 
-h1, h2, h3 {
+h2, h3 {
   color: #fff;
   margin: 0;
+}
+
+h1 {
+  color: #fff;
 }
 
 * {
@@ -172,6 +176,21 @@ nav ul li a {
   border-left: 3px solid $lightBlue;
 
   color: white;
+}
+
+.mobile-dropdown-content {
+  display: none; /* HAS TO BE NONE */
+  background-color: rgba(2, 9, 23, 0.95);
+  border-bottom: 1px solid $lightBlue;
+  border-top: 1px solid $lightBlue;
+  a {
+    color: white;
+    padding: 12px 13px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s all ease;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.11);
+  }
 }
 
 /*======= END DROP DOWN ======*/
@@ -294,6 +313,10 @@ nav ul li a {
   }
 }
 
+.del-category {
+  background: #c40000 !important;
+}
+
 .btn-download {
   background: rgba(0, 196, 51, 0.97);
   font-size: 15px;
@@ -327,7 +350,7 @@ h1.section-header {
   max-width: 1164px;
   padding: 1em;
   margin: auto;
-  padding-top: 50px;
+  //padding-top: 50px;
   padding-bottom: 50px;
 
 }
@@ -484,11 +507,13 @@ h1.section-header {
   margin: 0 auto;
 }
 
+.description {
+  margin-top: -10px;
+}
+
 .properties {
+  padding-top: 10px;
   padding-bottom: 20px;
-  h2 {
-    padding-bottom: 20px;
-  }
 }
 
 .pagination {
@@ -497,11 +522,14 @@ h1.section-header {
   margin: 40px 0 -40px 0;
   font-size: 1.4em;
   transition: all 0.3s ease;
-  .ngx-pagination .current {
-    transition: all 0.2s ease;
-    color: white;
-    border-radius: 3px;
-    border: 1px solid transparent;
+  .ngx-pagination {
+    padding-left:0;
+    .current {
+      transition: all 0.2s ease;
+      color: white;
+      border-radius: 3px;
+      border: 1px solid transparent;
+    }
   }
   .ngx-pagination a, .ngx-pagination button {
     transition: all 0.2s ease;
@@ -524,6 +552,7 @@ textarea {
 /*====== COMMENTS ======*/
 
 .comments-section {
+  clear: both;
   padding-top: 10px;
   padding-bottom: 30px;
   .submit {
@@ -562,7 +591,17 @@ textarea {
 .comment {
   border-left: 2px solid $lightBlue;
   padding-left: 10px;
+  max-width: 475px;
+  //border: 1px solid grey;
 
+}
+
+.hiks {
+  float: right;
+  margin-top: -5px;
+  cursor: pointer;
+  font-weight: 300;
+  font-size: 25px;
 }
 
 .uploaded-by {
@@ -813,9 +852,25 @@ textarea {
   }
 }
 
+.responsive-details {
+  .details-p-left {
+    float: left;
+  }
+
+  .details-p-right {
+    float: right;
+  }
+
+  h3, h2, .properties {
+    clear: both;
+  }
+
+}
+
 /*====== FOOTER ======*/
 
 .footer {
+  clear: both;
   background: $blackBlue;
   padding: 10px;
   text-align: center;
@@ -835,12 +890,12 @@ textarea {
   .tile {
     width: 50%;
   }
-  .description {
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-  .wp-content p, .wp-content h1 {
-    padding-left: 20px;
+}
+
+@media screen and (max-width: 1140px) {
+  .responsive-details, .wp-content h1 {
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
 
@@ -848,9 +903,10 @@ textarea {
   .tile {
     width: 100%;
   }
-}
+  .wp-content h1, h1.section-header {
+    font-size: 32px;
+  }
 
-@media screen and (max-width: 768px) {
   header {
     padding: 0;
     margin-top: -50px;
@@ -872,6 +928,10 @@ textarea {
     }
   }
 
+  .mobile-menu .shiny {
+    height: 45px;
+  }
+
   .nav-bar {
     display: none;
   }
@@ -885,9 +945,21 @@ textarea {
     margin-left: 30px;
     margin-right: 30px;
   }
+
+  .comments-section{
+    textarea{
+      width: 99%;
+    }
+  }
 }
 
-
+@media screen and (max-width: 430px) {
+  .properties button {
+    display: block;
+    margin: 10px auto 0 auto;
+    width: 100%;
+  }
+}
 
 //PRELOADER
 

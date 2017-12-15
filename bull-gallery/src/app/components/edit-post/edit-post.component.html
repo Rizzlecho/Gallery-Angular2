@@ -1,7 +1,7 @@
 <div class="login-page">
   <div class="form  upload-form">
     <div class="row header">
-      <div class="large-12 columns">UPLOAD</div>
+      <div class="large-12 columns">EDIT POST</div>
     </div>
 
     <!--NOTIFICATION-->
@@ -13,7 +13,8 @@
     <span *ngIf="ifNotValid">
       <div *ngIf="!validCategory" class="shiny btn-delete" style="margin-top: 20px;">Please choose a valid category!</div>
     </span>
-    <form class="login-form" (ngSubmit)="submit()" [formGroup]="upload">
+
+    <form class="login-form" (ngSubmit)="submit()" [formGroup]="editPostGroup">
       <label for="title">Title</label>
       <input formControlName="title" id="title" type="text" placeholder="Title"/>
 
@@ -31,7 +32,7 @@
       <textarea formControlName="description" id="description" placeholder="Description"></textarea>
 
 
-      <button class="btn btn--default shiny btn-login" type="submit">Submit</button>
+      <button class="btn btn--default shiny btn-login" type="submit">Save</button>
     </form>
   </div>
 </div>
